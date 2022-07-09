@@ -1,0 +1,139 @@
+*{box-sizing: border-box;}
+.title{font-family: elephant; font-size: 300%; text-align: center;}
+.intro{font-size: 30px; background-color: purple; text-align: justify;}
+.subtitle{font-size: 0.8em; text-align: right;}
+#name1{text-shadow: 5px 0px 2px red;}
+#name2{text-shadow: 0px 10px 2px red;}
+#name3{text-shadow: -10px 10px 2px red;}
+#name4{text-shadow: 10px -10px 2px red;}
+#name5{text-shadow: 10px -10px 5px red;}
+.box1, .box2{background-color: purple; height: 100px; width: 200px;
+      box-shadow: 5px 5px 10px black;}
+.box2{box-shadow: 0px 0px 10px 10px black;}
+.box3, .box4, .box5, .box6, .box7, .box8{ width: 200px; height: 100px;}
+.box3{background-color: yellow; margin-bottom: 50px;}
+.box4{background-color: green; margin-left: 100px;}
+.box5{background-color: lightblue; margin-left: auto; margin-right: auto;}
+.box6{background-color: gray; margin: 100px;}
+.box7{background-color: orange; margin: 100px 300px;}
+.box8{background-color: olive; margin:200px 100px 300px 50px;}
+/*------- PADDING -------*/
+.p1{padding-top:50px;}
+.p2{padding: 20px 100px;}
+.p3{padding: 50px;}
+.p4{padding: 20px 50px 100px 30px;}
+/*------- LAYOUT --------*/
+.cats{background-color: lightblue; font-size: 300%; text-align: center;
+      padding: 20px 0px; text-shadow:  2px 2px 5px white; width: 90%;
+      margin: auto; box-shadow: 2px 2px 5px black; color: blue;}
+/*------- IMAGES --------*/
+.img_container{
+  width:90%; margin: auto; margin-top: 2em;
+}
+.image1, .image2, .image3, .image4{width: 45%; margin: 2%;}
+.row1, .row2, .row3{margin-top: 2em;}
+.image1{border-radius: 20px;}
+.image2{border-radius: 50%;}
+.image3{border: ridge 10px orange; padding:10px; background-color: white;}
+.image4{box-shadow: 0px 0px 5px 5px black;}
+.pContent{width: 50%; float: right; padding: 1em 2em;}
+/*----- CONTACT -----*/
+.contact{background-color: gray; display: inline-block; width: 100%;}
+.contact1, .contact2, .contact3{width:30%; float:left; margin-left: 3%
+  padding:1em 2em;}
+/*----- COLORS -----*/
+.g1, .g2, .g3, .g4, .g5, .g6{font-size: 5em; font-family:"Arial Black";}
+.g1, .g4{color:rgb(66,133,244);}
+.g2, .g6{color:rgb(234,67,53);}
+.g3{color:rgb(251,188,5);}
+.g5{color:rgb(52,168,83);}
+.c1, .c2, .c3, .c4{font-size: 2em; padding: 1em;}
+.c1{background-color:#78fff4;}
+.c2{background-color:#3acbc1;}
+.c3{background-color: #afffff;}
+.c4{background-color: #ff5757;}
+/*----- IMAGES AND POSITION ----- */
+.photo_container{
+  border: ridge 20px gray;
+  width: 80%;
+  margin: auto;
+  position: relative;
+}
+.photo_container img{
+  width: 100%;
+}
+.photo_p1{text-align: center; font-size: 2em; color: white;
+position: absolute; top:0px; left: 10%; right: 10%;
+background-color:rgba(100,67,39,0.6); box-shadow: 1px 1px 5px white;}
+.photo_img2{width: 100%;}
+.photo_p2{position:absolute; background-color: rgba(10,10,10,0.4);
+top:50%; bottom: 20%; left: 20%; right: 20%; color: lightgray;
+text-align: center; padding: 1em; font-size: 1.2em;}
+.link_p2{display:block; background-color: rgb(1,255,201); margin-top: 1em;
+padding: 0.2em; border-radius: 12px; text-decoration: none;}
+.link_p2:hover{background-color: rgb(1,241,190); box-shadow: 0px 0px 5px 2px gray;}
+/* ----- FILTERS ------ */
+.blur1, .blur2, .blur3, .sepia1, .sepia2, .sepia3, .invert1, .invert2, .invert3{width: 30%; margin-left: 2%;}
+.blur1{filter: blur(2px);}
+.blur2{filter:blur(10px);}
+.blur3{filter: blur(15px);}
+.sepia1{filter: sepia(10%);}
+.sepia2{filter: sepia(60%);}
+.sepia3{filter: sepia(90%);}
+.invert1{filter: invert(10%);}
+.invert2{filter: invert(60%);}
+.invert3{filter: invert(100%);}
+/* ---- ANIMATION ---- */
+.animation_container{
+  border: ridge 20px gray;
+  width: 80%;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+.mountain{width: 100%;}
+.bus{width: 30%; position: absolute; bottom: -10%; right: -20%;
+animation-name: moveBus; animation-duration: 5s;
+animation-iteration-count: 2;
+animation-fill-mode: forwards; animation-direction: alternate;
+animation-timing-function: ease;}
+@keyframes moveBus {
+  from{transform:translateX(0%);}
+  to{transform:translateX(-300%);}
+}
+/* ---- Animation to a ball ----*/
+.ball{width:10%; position: absolute; bottom:0%; left: -10%;
+animation-name: moveBall; animation-duration: 10s;
+animation-delay: 10s; animation-fill-mode: forwards;}
+@keyframes moveBall {
+  0%{transform: rotate(0deg); left:0%;}
+  100%{transform: rotate(700deg); left:100%;}
+}
+/* ---- Animation Cloud ---- */
+.cloud1, .cloud2, .cloud3{position: absolute;}
+.cloud1{width: 20%; top: 0%; left: -20%;
+  /* ------Animation Parameters
+  animation-name: moveCloud;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  */
+  animation: moveCloud 12s infinite;
+}
+.cloud2{width: 45%; top: -30%; left: -50%; animation: moveCloud 22s infinite;}
+.cloud3{width: 50%; left: -10%; top: -20%; animation: moveCloud 30s infinite;}
+@keyframes moveCloud {
+  0%{opacity:0.8; transform: translate(0,0);}
+  20%{opacity:1;}
+  40%{opacity:0.5;}
+  60%{opacity:0.3; transform: translate(100%,-10%);}
+  80%{opacity:0.7;}
+  100%{opacity:0.9; transform: translate(400%, 5%)}
+}
+.animation_p{position:absolute; top: 20%; bottom:20%; text-align: center;
+background-color: transparent; left: 10%; right: 10%; font-size: 2em;
+color: white; animation: zoomTxt 8s alternate 2 forwards;}
+@keyframes zoomTxt{
+  0%{transform: scale(0); color: green; text-shadow: 5px 5px 2px black;}
+  50%{transform: scale(2); color: gray; text-shadow: -5px -5px 5px black;}
+  100%{transform: scale(1); color: red; text-shadow: 5px 5px 5px black;}
+}
