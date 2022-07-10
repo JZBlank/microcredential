@@ -1,0 +1,116 @@
+*{box-sizing:border-box;}
+
+/* Landscape Image */
+
+.landscape_container{
+  width:100%;
+  margin: auto;
+}
+
+.landscape{
+  display: block;
+  width: 65%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  animation-name: landscapeFilter;
+  animation-delay: 3s;
+  animation-duration: 0.2s;
+  animation-iteration-count: 3;
+}
+
+@keyFrames landscapeFilter{
+  100%{filter: invert(300%); }
+}
+
+.landscape_container h1{
+  position: absolute;
+  font-size: 50px;
+  top: 0%;
+  left:20%;
+  animation-name: moveTxt, changeTxtColor, removeitems;
+  animation-duration: 0.2s, 5s, 0.1s;
+  animation-delay: 1s, 1s, 3.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  color: transparent;
+}
+
+@keyframes changeTxtColor {
+  0%{color: rgb(86,185,235); text-shadow: -1px 1px 0 #000,1px 1px 0 #000, 1px -1px 0 #000; -1px -1px 0 #000;}
+  50%{color: white; text-shadow: -1px 1px 0 #000,1px 1px 0 #000, 1px -1px 0 #000; -1px -1px 0 #000;}
+  100%{color: white; text-shadow:-1px 1px 0 #000,1px 1px 0 #000, 1px -1px 0 #000; -1px -1px 0 #000;}
+
+}
+
+@keyframes moveTxt{
+  from{transform: translateX(0px);}
+  to{transform: translate(100px, 150px);}
+}
+
+.umbrella{
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  width: 10%;
+  animation-name: zoomUmbrella, removeitems;
+  animation-delay: 0s, 3.5s;
+  animation-duration: 1s, 0.1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoomUmbrella{
+  0%{transform: scale(0); color: green; text-shadow: 5px 5px 2px black;}
+  100%{transform: scale(1); color: red; text-shadow: 5px 5px 5px black;}
+}
+
+@keyFrames removeitems{
+  100%{opacity: 0;}
+}
+
+.heart1, .heart2, .heart3, .heart4, .heart5, .heart6, .heart7, .heart8, .heart9, .heart10, .heart11, .heart12{
+  position: absolute; top: 0%; left: 40%;
+  opacity: 0;
+  animation-name: showHeart;
+  animation-delay: 3.5s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.heart1{ width: 53px;  height: 53px; animation-name: heartOpacity; animation-duration: 1s; animation-delay: 3.5s; animation-iteration-count: infinite;}
+.heart2{ width: 100px; height: 100px; animation-name: heartOpacity; animation-duration: 2/3s; animation-delay: 3.5s; animation-iteration-count: infinite;}
+.heart3{ width: 130px; height: 130px; animation-name: heartOpacity; animation-duration: 1.9s; animation-delay: 3.5s; animation-iteration-count: infinite;}
+.heart4{ width: 200px; height: 200px; animation-name: heartOpacity; animation-duration: 1.5s; animation-delay: 3.5s; animation-iteration-count: infinite;}
+.heart5{ width: 150px; height: 150px; animation-name: heartOpacity; animation-duration: 2.3s; animation-delay: 3.5s; animation-iteration-count: infinite;}
+.heart6{ width: 35px; height: 35px; animation-name: heartOpacity; animation-duration: 2.2s; animation-delay: 3.5s; animation-iteration-count: infinite;}
+.heart7{ width: 85px; height: 85px; animation-name: heartOpacity; animation-duration: 1.3s; animation-delay: 3.5s; animation-iteration-count: infinite;}
+.heart8{ width: 145px; height: 145px; animation-name: heartOpacity; animation-duration: 2.3s; animation-delay: 3.5s; animation-iteration-count: infinite;}
+.heart9{ width: 190px; height: 190px; animation-name: heartOpacity; animation-duration: 1.4s; animation-delay: 3.5s; animation-iteration-count: infinite;}
+.heart10{ width: 40px; height: 40px; animation-name: heartOpacity; animation-duration: 1.8s; animation-delay: 3.5s; animation-iteration-count: infinite;}
+.heart11{ width: 90px; height: 90px; animation-name: heartOpacity; animation-duration: 2s; animation-delay: 3.5s; animation-iteration-count: infinite;}
+.heart12{ width: 59px; height: 59px; animation-name: heartOpacity; animation-duration: 2.5s; animation-delay: 3.5s; animation-iteration-count: infinite;}
+
+.heart1{left: 50%; top: 10%;}
+.heart2{left: 30%; top: 14%;}
+.heart3{left: 65%; top: 60%;}
+.heart4{left: 40%; top: 30%;}
+.heart5{left: 20%; top: 30%;}
+.heart6{left: 20%; top: 65%;}
+.heart7{left: 27%; top: 60%;}
+.heart8{left: 35%; top: 68%;}
+.heart9{left: 60%; top: 10%;}
+.heart10{left: 60%; top: 55%;}
+.heart11{left: 53%; top: 74%;}
+.heart12{left: 75%; top: 34%;}
+
+@keyframes showHeart{
+  100%{opacity: 100%;}
+}
+
+@keyFrames heartOpacity{
+  0%{opacity: 100%;}
+  30%{opacity: 50%;}
+  60%{opacity: 0%;}
+  90%{opacity: 50%;}
+  100%{opacity: 100%}
+}
