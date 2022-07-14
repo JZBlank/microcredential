@@ -1,21 +1,22 @@
-*{box-sizing: border-box;}
+*{box-sizing: border-box; scroll-behavior: smooth;}
 body{margin: 0px;}
 header{
   height: 100px;
   text-align: center;
   width: 100%;
-  font-family: 'Enriqueta', serif;
+  font-family: 'Roboto', sans-serif;
 }
 
-header h3{
-  font-size: 30px;
-  margin-bottom: 0px;
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
+header .title{
+  opacity: 0%;
+  font-size: 100px;
   animation-name: showTxt;
   animation-duration: 2s;
   animation-iteration-count: 1;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  padding-top: 130px;
+  color: white;
 }
 
 @keyframes showTxt {
@@ -23,9 +24,9 @@ header h3{
   100%{opacity: 100%}
 }
 
-header .animateTxt{
+header .subtitle{
+  font-size: 35px;
   opacity: 0%;
-  margin-top: -10px;
   width: 50%;
   margin-left: auto;
   margin-right: auto;
@@ -43,7 +44,6 @@ header .animateTxt{
 
 .welcome_container {
   width: 100%;
-
 }
 
 .welcome_container h1{
@@ -55,4 +55,61 @@ header .animateTxt{
   position: absolute;
   top: 0%;
   z-index: -1;
+  filter: brightness(80%);
+}
+
+.welcome_container .link_container{
+  margin-top: 160px;
+  overflow: auto;
+  text-align: center;
+}
+
+.link_container .link{
+  width: 15%;
+  margin-top: 50px;
+  font-size: 20px;
+  color: white;
+  border-radius: 30px;
+  border: 1.5px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+.link_container a{
+  text-decoration: none;
+}
+
+.link_container .link:hover{
+    background-color: orange;
+    transition-duration: 0.2s;
+}
+
+.aboutClimateChange{
+  margin-top: 250px;
+  height: 350px;
+  background-color: orange;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.aboutClimateChange .meaning{
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+}
+
+.aboutClimateChange p{
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+}
+
+.container{
+  height: 100px;
 }
