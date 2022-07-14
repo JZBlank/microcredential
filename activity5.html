@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Joyce Zhang: Activity 5</title>
+  </head>
+  <body>
+    <h1>Joyce Zhang: Activity 5</h1>
+    <script type="text/javascript">
+      let number1 = 56
+      let number2 = -80
+      let number3 = 3/4
+      let boolean1 = true
+
+      let color = "beige"
+      let msg = "Hello World!"
+
+      //console.log(number2)
+      //console.log("Good evening!")
+      //console.log("The color is: " + color)
+      //console.log(`The color is: ${color}`)
+
+      //let name = prompt("Enter a name: ", "WHERE AM I?")
+      /*
+      multiple lines comment
+
+      */
+
+      //let num1 = prompt("Enter number 1: ");
+      //num1 = parseInt(num1)
+      //let num2 = parseInt(prompt("Enter number 2: "));
+      //let summation = num1 + num2;
+
+      console.log(" ========= Activity 5.1: Variables and Prompt Method =========")
+
+      //STRINGS
+      let name = prompt("Enter a name:")
+      let name2 = "WillSmith"
+      let nameLength = name.length
+      let upperName = name.toUpperCase()
+      let lowerName = name.toLowerCase()
+      let newName = name2.slice(2,8)
+
+      // ARRAYS
+      let everything = [-23, 'color', true, "Peter Pan", 88]
+      let copyArray = everything
+      let sliceArray = everything.slice(0,5)
+
+      let luckynumber = prompt("Enter your lucky number:")
+
+      console.log(`a) Welcome to the program ${name}. Lucky number: ${luckynumber}`)
+      console.log(`b) Good morning ${name}. You entered number: ${luckynumber}`)
+
+      console.log(" ========= Activity 5.2: Strings and String Methods =========")
+
+      let word = prompt("Enter a word:")
+      let wordLength = word.length
+      let upperWord = word.toUpperCase()
+      let lowerWord = word.toLowerCase()
+      let splitWord = word.slice(-2);
+
+      console.log(`a) The third letter of the word is: ${word[2]}`)
+      console.log(`b) The length of word ${word} is ${wordLength}`)
+      console.log(`c) Uppercase: ${upperWord}`)
+      console.log(`d) The last two characters of the word ${word} are ${splitWord}`)
+
+      let animal = prompt("Enter an ANIMAL:")
+      let negativenumber = prompt("Enter a NEGATIVE NUMBER:")
+
+      let array = [20, 'red', false, 'pink', 3]
+      console.log(" ========= Activity 5.3: Arrays and Array Methods =========")
+      console.log(`a) Mixed array with initial values: ${array}`)
+
+      array.push(animal)
+      console.log(`b) Mixed array with a new animal added to the end: ${array}`)
+
+      array.unshift(negativenumber)
+      console.log(`c) Mixed array with a new NEGATIVE NUMBER added to the front/beginning
+      of the array: ${array}`)
+
+      let array2 = array.slice(0,7)
+      let array3 = array.reverse();
+      console.log(`d) Mixed array ${array2} and reverse of copy array: ${array3}`)
+
+
+
+    </script>
+  </body>
+</html>
