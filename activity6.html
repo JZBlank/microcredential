@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Joyce Zhang: Activity 6</title>
+  </head>
+  <body>
+    <h1>Joyce Zhang: Activity 6</h1>
+    <script type="text/javascript">
+      let goodMood = false;
+      let gotSleep = true;
+
+      if(goodMood === gotSleep){
+        console.log("Today is a good day!")
+      }
+      else{
+        console.log("I am moody!")
+      }
+
+      // Example 2: Check if two numbers are exactly equal
+      let num1 = -1, num2 = -7, checkNum;
+      if(num1 === num2){
+        checkNum = true;
+      }
+      else{
+        checkNum = false;
+      }
+      console.log(`Are the numbers exactly equal to? ${checkNum}`)
+
+      // Example 3: Check if two numbers are exactly equal to, greater than or less than
+      if(num1 === num2){
+        console.log('Numbers are exactly the same!')
+      }
+      else if(num1>num2){
+        console.log(`${num1} is greater than ${num2}`)
+      }
+      else{
+        console.log('INVALID!')
+      }
+
+      // Example 4: Pick a value from an array
+      let colors = ['red', 'blue','green', 'yellow', 'orange']
+      let userPick = parseInt(prompt("Select a color from 1 to 5:")) // convert input into an integer
+      let selectColor = colors[userPick - 1]
+
+      if(selectColor === 'red'){
+        console.log('The selected color is red!')
+      }
+      else if(selectColor == 'blue'){
+        console.log('The selected color is blue!')
+      }
+      else if(selectColor == 'green'){
+        console.log('The selected color is green!')
+      }
+      else if(selectColor == 'yellow'){
+        console.log('The selected color is yellow!')
+      }
+      else if(selectColor == 'orange'){
+        console.log('The selected color is orange!')
+      }
+      else{
+        console.log('INVALID!')
+      }
+
+      // Example 5: Write JS code that opens a dialogue box and asks
+      // user to enter a number. If the user enters a string, it will
+      // console a message as: _________ is a string. Otherwise,
+      // if the user enters a number, it will console a message as
+      // _________ is a number.
+
+      let userInput = prompt("Enter a number:")
+      let checkInput = isNaN(parseInt(userInput))
+
+      if(checkInput){
+        console.log(`${userInput} is a string`)
+      }
+      else{
+        console.log(`${userInput} is a number`)
+      }
+
+      // Example 6) Create a JS code, using if-else statements
+      //to check if a password is at least six characters not counting the space
+      // If password has more than six characters but it also has space,
+      //then the program will display an error message
+      let password = prompt("Enter a password with 6+ characters" )
+
+      if(password.length>=6){
+        console.log('Password has more than 6 characters!')
+        if(password.indexOf(' ') === -1){
+          console.log(`${password} Great! Password has no space!`)
+        }
+        else{
+          console.log('Warning! password cannot have space!')
+        }
+      }
+      else{
+        console.log('INVALID! Password has less than 6 characters!')
+      }
+
+
+      // Example 7
+      let name = prompt("Enter a name: ")
+      if(name){console.log(`Welcome to the program ${name}`)}
+      else{console.log('You did not enter a name!')}
+
+    </script>
+  </body>
+</html>

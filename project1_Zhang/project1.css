@@ -215,7 +215,6 @@ header .subtitle{
   width: 45%;
 }
 
-
 .container .content_container:last-child{
   width: 50%;
   float: right;
@@ -225,7 +224,7 @@ header .subtitle{
 
 .container .content_container:last-child .sub_txt{
   width: 80%;
-  margin-top: 35px;
+  margin-top: 40px;
   text-align: center;
 }
 
@@ -242,20 +241,9 @@ header .subtitle{
 }
 
 .content_container .link:hover{
-    background-color: orange;
-    transition-duration: 0.3s;
-    box-shadow: 1px 1px 5px black;
-}
-
-.container:first-child .content_container:last-child .sub_txt{
-  text-align: center;
-  border: 1px solid red;
-}
-
-.container:last-child .content_container:first-child .sub_txt{
-  width: 50%;
-  margin-top: 35px;
-  text-align: center;
+  background-color: orange;
+  transition-duration: 0.3s;
+  box-shadow: 1px 1px 5px black;
 }
 
 .container .content_container .link a{
@@ -263,7 +251,73 @@ header .subtitle{
   color: white;
 }
 
+/* 2nd container */
+.container .content_container2{
+  float: left;
+}
+
+.container .content_container2 img{
+  max-height: 400px;
+  height: 65%;
+  width: 70%;
+  border-radius: 10px;
+  transition: 2s;
+  padding-right:
+}
+
+.container .content_container2 img:hover{
+  filter: invert(100%);
+  transition: 1s;
+}
+
+
+.container .content_container2:first-child{
+  width: 50%;
+  float: left;
+  padding-left: 80px;
+}
+
+.container .content_container2:first-child .text_section{
+  width: 80%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container .content_container2:first-child h1{
+  margin-bottom: 50px;
+}
+
+
+.container .content_container2:last-child{
+  width: 50%;
+  float: right;
+}
+
+.container .content_container2:last-child .sub_txt{
+  width: 60%;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.content_container2 .link{
+  width: 50%;
+  border-radius: 20px;
+  color: white;
+  font-size: 25px;
+  padding: 10px;
+  background-color: blue;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container .content_container2 .link a{
+  text-decoration: none;
+  color: white;
+}
+
+
 .more_info{
-  border: 1px solid black;
   height: 400px;
 }
