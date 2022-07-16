@@ -320,6 +320,7 @@ header .subtitle{
 .more_info_bg {
   background-color: blue;
   padding-top: 10px;
+  height: 1500px;
 }
 
 
@@ -464,9 +465,44 @@ th{
 }
 
 .bullet_list h1:last-child{
-  margin-left: 10%;
-  padding-left: 10px;
-  border-left: 5px solid orange;
+  margin-left: 60%;
+  border-right: 5px solid orange;
+  padding-right: 10px;
+  width: fit-content;
+  border-right: 5px solid orange;
 }
 
-.bullet_list
+.footer_container{
+  background-color: orange;
+  margin-top: -30px;
+  height: 200px;
+  padding-left: 60px;
+  border: 1px solid black;
+}
+
+.footer_container .footer_section:nth-child(2){
+}
+
+.footer_section .footer_section:last-child{
+}
+
+.footer_container .footer_section{
+  float: left;
+  width: 33.33%;
+}
+
+.footer_container .footer_section .signature{
+  padding-bottom: 10px;
+}
+
+.footer_container .footer_section em{
+  height: 300px;
+  width: 25%;
+  text-align: left;
+}
+
+.footer_section .social_media .icon{
+  float: left;
+  width: 10px;
+  margin: 20px;
+}
