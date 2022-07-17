@@ -325,6 +325,8 @@ header .subtitle{
 }
 
 .more_info_bg {
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 10px;
 }
 
@@ -373,6 +375,7 @@ header .subtitle{
 .more_info .companies{
   float: left;
   width: 100%;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
@@ -380,6 +383,14 @@ header .subtitle{
   width: 15%;
   position: relative;
   padding: 10px;
+}
+
+.meat_company{
+  margin-bottom: 16px;
+}
+
+.hp{
+  margin-bottom: 10px;
 }
 
 
@@ -447,31 +458,54 @@ th{
   margin-left: 100px;
 }
 
+.image img{
+  width:10%;
+}
+
+
 .bullet_list{
   background-color: white;
   margin-top: 100px;
+  height: 400px;
+  padding-top: 20px;
 }
 
-.bullet_list h1:first-child{
-  margin-left: 10%;
-  padding-left: 10px;
-  border-left: 5px solid blue;
-  padding-top: 50px;
+.bullet_list .news_text{
+  float: left;
+  width: 30%;
+  height: 100%;
+  padding-top: 40px;
+  padding-right: 50px;
 }
 
-.bullet_list p{
-  margin-left: 11.5%;
-}
-.bullet_list ul{
-  margin-left: 150px;
+.bullet_list .news_text img{
+  width: 400px;
+  margin-left: 100px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px black;
 }
 
-.bullet_list h1:last-child{
+
+.bullet_list .news_text:last-child{
+  margin-top: 50px;
+  border: 1px solid white;
+  width: 50%;
+  height: 100px;
+  float: right;
+}
+
+.news_text:last-child h1{
+  color: black;
+}
+
+.ready{
+  height: 50px;
+  font-size: 40px;
+  width: fit-content;
   margin-left: 60%;
+  margin-bottom: 20px;
   border-right: 5px solid orange;
   padding-right: 10px;
-  width: fit-content;
-  border-right: 5px solid orange;
 }
 
 .footer_container{
@@ -479,14 +513,22 @@ th{
   margin-top: -30px;
   height: 200px;
   padding-left: 60px;
-  border: 1px solid black;
 }
 
 .footer_container .footer_section{
   float: left;
   width: 33.33%;
-  border: 5px solid blue;
+  padding-top: 20px;
 }
+
+.footer_section:nth-child(2){
+  padding-left: 90px;
+}
+
+.footer_section:last-child{
+  padding-left: 70px;
+}
+
 
 .footer_container .footer_section .signature{
   padding-bottom: 10px;
@@ -500,11 +542,12 @@ th{
 
 .footer_section .social_media .icon{
   float: left;
-  width: 10px;
-  margin: 10px;
+  text-align: center;
+  margin-left: -10px;
 }
 
 .footer_section .social_media .icon img{
-  width: 10px;
-  position: absolute;
+  width: 60%;
+  background-color: white;
+  border-radius: 5px;
 }
