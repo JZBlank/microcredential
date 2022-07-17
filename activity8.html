@@ -153,7 +153,12 @@
       function checkNum(){
         let number = prompt("Enter a number")
         while(number == null || number == '' || isNaN(parseInt(number))){
-          number = prompt('Please enter a valid number: ')
+          if(number == null || number == ''){
+            number = prompt(`You forgot to enter a number. Enter a number again: `)
+          }
+          else if(isNaN(parseInt(number))){
+            number = prompt(`${number} is not a number. Enter a number again: `)
+          }
         }
         if(number % 2 == 0){
           return true;
@@ -165,7 +170,7 @@
       // 3: lottery()
       function lottery(number){
         for(let i = 0; i < number; i++){
-          console.log(`[${Math.floor(Math.random()*100)}, ${Math.floor(Math.random()*100)}, ${Math.floor(Math.random()*100)}, ${Math.floor(Math.random()*100)}, ${Math.floor(Math.random()*100)}]`)
+          console.log(`(${number}) [${Math.floor(Math.random()*100)}, ${Math.floor(Math.random()*100)}, ${Math.floor(Math.random()*100)}, ${Math.floor(Math.random()*100)}, ${Math.floor(Math.random()*100)}]`)
         }
       }
     </script>
