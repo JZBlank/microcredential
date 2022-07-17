@@ -157,9 +157,6 @@ header .subtitle{
   color: black;
 }
 
-
-
-
 .aboutClimateChange{
   margin-top: 250px;
   height: 350px;
@@ -331,12 +328,11 @@ header .subtitle{
   padding-top: 10px;
 }
 
-.more_info_bg img{
+.more_info_bg .img_container{
   width: 100%;
-  height: auto;
+  height: 1500px;
   z-index: -1;
   position: absolute;
-  border: 10px solid red;
 }
 
 
