@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Joyce Zhang: Activity 9</title>
+  </head>
+  <body>
+    <h1>Joyce Zhang: Activity 9</h1>
+    <script type="text/javascript">
+      // Example 1:
+      let msg = 'This is an outside message'
+      function displayMsg(){
+        msg = "Hello World I'm inside of a function"
+        console.log(msg)
+      }
+      console.log(msg)
+      // Example 1.b
+      let msg1 = 'This is a global variable'
+      function displayMsg1(){
+        console.log(`function message ${msg1}`)
+      }
+      console.log(`After function ${msg1}`)
+      // Example 2:
+      const fullMoon = true;
+      let species = 'human' // Global variable
+      if(fullMoon){
+        let species = 'werewolf' // Local variable
+        console.log(`Lupin is currently a ${species}`)
+      }
+      console.log(`Lupin is outside the if-statement ${species}`)
+      // Example 3: Save a function in a variable
+      const sum = function(num1, num2){
+        return num1+num2
+      }
+      // Example 3b: Return the square of a number
+      console.log('Example 3.b: Return the square of a number')
+      let square = function(num){
+        return Math.pow(num,2)
+      }
+      // Example 4: Define a function that will run twice the function
+      // roll dice
+      function callTwice(dice){
+        console.log(dice())
+        console.log(dice())
+      }
+      function rolldice(){
+        const roll = Math.floor(Math.random()*6)+1
+        return roll
+      }
+      // Example 5: Returning functions
+      function makeBetweenFunc(min, max){
+        return function (num){
+          return num>=min && num<=max
+        }
+      }
+      // Example 6: Create a method for object myMath
+      const myMath = {
+        square (num){return num*num},
+        double (num){return num*2}
+      }
+      // Example 7: Define an object called square, which will
+      // hold methods area and perimeter
+      const squareFig = {
+        area (side){return side*side},
+        perimeter (side) {return side * 4}
+      }
+      // Example 8: Use the "this" keyword on an object
+      const cat = {
+        // Let name = 'Mickey'
+        name: 'Mickey',
+        color: 'White with black spots',
+        breed: 'Unknown',
+        meow() {console.log(`${this.name}: MEOW MEOW MEOW!`)}
+      }
+      // Example 9: Define an object called "hen" with two
+      // properties and a method
+      const hen = {
+        name: 'Helen',
+        eggCount: 0,
+        layAnEgg (){this.eggCount++; return `EGG! Egg count = ${this.eggCount}`}
+      }
+
+
+
+
+    </script>
+  </body>
+</html>
