@@ -79,10 +79,41 @@
         eggCount: 0,
         layAnEgg (){this.eggCount++; return `EGG! Egg count = ${this.eggCount}`}
       }
+      // Try and Catch
 
+      let hello = 'HEY THERE'
+      try{
+        console.log(hello.toUpperCase())
+      }
+      catch{
+        console.log('ERROR!!')
+      }
+      console.log('After try and catch!')
 
+      // Example 10:
+      console.log('Example 10: Try and catch')
+      function yell(message){
+        try{
+          console.log(message.toUpperCase().repeat(3))
+        }
+        catch{
+          console.log('Please pass a string next time!')
+        }
+      }
 
+      // Example 11: Default Parameters in a function
+      console.log('Example 11: Default Parameters')
+      function rollDice(numSides=6){
+        return Math.floor(Math.random()*numSides) + 1
+      }
+      // Example 12: Spread ...
+      console.log('Example 12: Spread!')
+      let nums = [-9, 20, -13, 8, 6]
+      let greatest = Math.max(6, -1, 7, -10, 5)
+      let lowest = Math.min(6, -1, 7, -10, 5)
 
+      let animal = ['cat', 'dog', 'fish']
+      let copyAnimal = [...animal]
     </script>
   </body>
 </html>
