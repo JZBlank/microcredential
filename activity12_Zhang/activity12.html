@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joyce Zhang: Activity 12 - Responsive Webpage</title>
+    <link rel="stylesheet" href="activity12.css">
+  </head>
+  <body>
+
+    <!-- RESPONSIVE -->
+    <h1 class="mainTitle">Four Seasons</h1>
+    <nav class="nav">
+      <a href="https://www1.nyc.gov/" target="_blank">NYC</a>
+      <a href="https://www.cuny.edu/" target="_blank">CUNY</a>
+      <a href="https://www.qcc.cuny.edu/" target="_blank">QCC</a>
+    </nav>
+    <section class="cardContainer">
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="img/winter.jpg" alt="Image of Winter">
+        <h3>Winter</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        <!-- open modal window -->
+        <a id="openItem1">ADD TO CART</a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="img/fall.jpg" alt="Image of Fall">
+        <h3>Fall</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="img/spring.jpg" alt="Image of Spring">
+        <h3>Spring</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+      </div>
+      <!-- Card 4 -->
+      <div class="card">
+        <img src="img/summer.jpg" alt="Image of Summer">
+        <h3>Summer</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+      </div>
+    </section>
+
+    <!-- FORMS -->
+
+      <hr>
+      <input type="text" name="username" value="" maxLength="20" placeholder="Up to 20 characters" class="input2">
+      <input type="password" name="password" value="" placeholder="Up to 8 characters" maxlength="8" id="myPassword">
+      <a id="viewPassword">View Password</a>
+      <!-- Example 4: Create a checkbox list for different animals -->
+      <p>Select your favorite animal (checkbox)</p>
+      <label for="cat">Cats</label>
+      <input type="checkbox" name="animals" value="cat" id="cat">
+      <br>
+      <label>Dog<input type="checkbox" name="animals" value="dog"></label>
+      <!-- Example 5 -->
+      <h3>Select a gender</h3>
+      <label>Female <input type="radio" name="gender" value="female"></label>
+      <label>Male <input type="radio" name="gender" value="male"></label>
+      <label>Others <input type="radio" name="gender" value="others"></label>
+    <hr>
+    <!-- Example 6 -->
+    <form action="https://www.google.com/search">
+      <input type="search" name="q" placeholder="Search">
+      <button>Search on Google</button>
+    </form>
+
+    <form action="https://www.youtube.com/results">
+      <input type="search" name="search_query" placeholder="Search">
+      <button>Search on Youtube</button>
+    </form>
+    <label for="date">Select appointment date:</label>
+    <input type="date" name="appointment" value="" id="date">
+    <hr>
+    <!-- SLIDESHOW -->
+    <h1>MANUAL SLIDESHOW</h1>
+    <section class="container_slideshow">
+      <div class="slide">
+        <img src="img/spring.jpg" alt="Image of Spring">
+        <p>Spring</p>
+      </div>
+      <div class="slide">
+        <img src="img/summer.jpg" alt="Image of Summer">
+        <p>Summer</p>
+      </div>
+      <div class="slide">
+        <img src="img/fall.jpg" alt="Image of Fall">
+        <p>Fall</p>
+      </div>
+      <div class="slide">
+        <img src="img/winter.jpg" alt="Image of Winter">
+        <p>Winter</p>
+      </div>
+      <a class="prev">&#10094;</a>
+      <a class="next">&#10095;</a>
+    </section>
+
+    <h1>AUTOMATIC SLIDESHOW</h1>
+    <section class="container_slideshow">
+      <div class="slideAuto">
+        <img src="img/spring.jpg" alt="Image of Spring">
+        <p>Spring</p>
+      </div>
+      <div class="slideAuto">
+        <img src="img/summer.jpg" alt="Image of Summer">
+        <p>Summer</p>
+      </div>
+      <div class="slideAuto">
+        <img src="img/fall.jpg" alt="Image of Fall">
+        <p>Fall</p>
+      </div>
+      <div class="slideAuto">
+        <img src="img/winter.jpg" alt="Image of Winter">
+        <p>Winter</p>
+      </div>
+    </section>
+
+    <!-- PRACTICE -->
+    <h1>Joyce Zhang</h1>
+    <section class="container">
+      <header class="title">
+        TITLE
+      </header>
+      <main class="intro">
+        INTRODUCTION
+      </main>
+      <footer class="footer">CONTACT US</footer>
+    </section>
+
+    <!-- Modal Window for Item1 -->
+    <form id="myForm" action="sentForm.html" method="post">
+      <section class="modalWindow">
+        <div class="modalBody">
+          <header class="modalHeader"><a href='#' id="closeModal">&#10005;</a>
+          </header>
+          <main class="modalInfo">INFORMATION OF THE PRODUCT <br><br>
+            <label for="firstN">First Name: <input type="text" name="firstName" id="firstN"</label>
+            <br><br>
+            <label for="lastN">Last Name: <input type="text" name="lastName" id="lastN"> </label>
+          </main>
+          <footer class="modalFooter"><input type="submit" value="SUBMIT" class="input1"></footer>
+        </div>
+      </section>
+    </form>
+
+    <script type="text/javascript" src="activity12.js"></script>
+  </body>
+</html>
