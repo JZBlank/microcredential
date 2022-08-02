@@ -78,11 +78,19 @@ header{
   width: 40%;
 }
 
-
-/*
-@media only screen and (max-width: 1500px){
-  .header_container{
-    border: 5px solid green;
-  }
+/* HOME TEXT + IMAGE */
+.col-lg-5{
+  padding-right: 5px;
 }
-*/
+.col-lg-6:nth-child(2){
+  padding-left: 0px;
+}
+
+.color_container{
+  height: 450px;
+  background-color: #FFC046;
+}
+.home_img img{
+  height: 450px;
+  width: 100%;
+}
