@@ -19,6 +19,7 @@ header{
   float: left;
   width: 100%;
   height: 50px;
+  /*color: #56361B;*/
 }
 
 .header_part:first-child {
@@ -80,14 +81,42 @@ header{
 
 /* HOME TEXT + IMAGE */
 
+
 .col-lg-5, .col-lg-4, .col-lg-3{
   padding: 5px;
   padding-top: 0px;
 }
 .container01_left{
   height: 450px;
+  background-color: #F2CEAF;
+
+  /*
   background-color: #FFC046;
+  */
+  /*
+  background-image: linear-gradient(to right, #FFC046, white);
+  */
 }
+
+.container01_left_text0{
+  font-size:  100px;
+  font-weight: normal;
+  color: black;
+  margin-left: 50px;
+  padding-top: 100px;
+  /*
+  color: #56361B;
+  */
+}
+
+.container01_left_text1{
+  font-size: 30px;
+  color: black;
+  margin-left: 50px;
+  margin-top: -50px;
+}
+
+
 .container01_mid{
   height: 450px;
 }
@@ -125,4 +154,81 @@ header{
 .container01_right img{
   width: 100%;
   height: 100%;
+}
+
+/* BANNER 01 */
+.banner01{
+  background-color: black;
+  height: 80px;
+  padding-top: 20px;
+  width: 100%;
+}
+
+.banner01_content{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  overflow: auto;
+  float: left;
+}
+.banner01_text{
+  float: left;
+  width: fit-content;
+  margin-left: 40%;
+  color: white;
+  margin-top: 10px;
+}
+.banner01_shopNow{
+  float: left;
+  border: solid white;
+  margin-left: 20px;
+  color: white;
+  padding: 5px;
+}
+
+/* COMPANY INFO_CONTAINER */
+.container02 {
+  background-color: #F1F1F1;
+  height: 500px;
+}
+
+.container02_title{
+  height: 80px;
+  text-align: center;
+  padding-top: 50px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.container02_subtitle{
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 50px;
+  margin-top: 10px;
+}
+
+.container02 .col-lg-4{
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.icons {
+  width: 20%;
+  border: 4px solid #FFC046;
+  border-radius: 50%;
+  padding: 10px;
+}
+.icons img{
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.container02_text {
+  padding-top: 20px;
+  padding-left: 10px;
 }
