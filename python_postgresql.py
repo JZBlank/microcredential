@@ -1,5 +1,5 @@
 """
-Python and PostgreSQL exercises:
+Python and PostgreSQL Exercises:
 Joyce Zhang
 """
 print("--------- Activity A --------- ")
@@ -21,4 +21,3 @@ if num1 < num2:
 elif num1 > num2:
     for i in range(num2, num1):
         print(i)
-
