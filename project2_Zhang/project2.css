@@ -91,14 +91,12 @@ header, body{
 }
 
 .header_right ul {
-  margin-left: 0%;
+  margin-right: 20%;
 }
 
 .header_right ul li{
   float: left;
   list-style: none;
-  display: inline-block;
-  margin-left: 10px;
 }
 
 .header_right ul li img {
@@ -106,15 +104,18 @@ header, body{
 }
 
 .header_part .header_right ul li:first-child{
-  margin-left: 20%;
+  position: absolute;
+  right: 250px;
 }
 
 .header_part .header_right ul li:nth-child(2){
-  margin-left: 2%;
+  position: absolute;
+  right: 100px;
 }
 
-.header_part .header_right ul li:nth-child(2){
-  margin-right: 10px;
+.header_part .header_right ul li:last-child{
+  position: absolute;
+  right: 0px;
 }
 
 
@@ -196,10 +197,11 @@ header, body{
   height: 100%;
 }
 
-
 @media only screen and (max-width: 1290px){
   .home_container{
+
   }
+  /* DEBUGGER CODE ENDS HERE */
 
   .header_part .header_right ul li:last-child{
     position: absolute;
@@ -208,14 +210,18 @@ header, body{
 }
 
 @media only screen and (max-width: 1190px){
-
   .home_container{
-    border: 1px solid green;
-  }
 
+  }
+  /* DEBUGGER CODE ENDS HERE */
 
   .header_part .header_left ul li:last-child{
     display: none;
+  }
+
+  .header_part .header_right ul li:first-child{
+    position: absolute;
+    right: 95px;
   }
 
   .header_part .header_right ul li:nth-child(2){
@@ -230,7 +236,7 @@ header, body{
   .container01_left_text0 .col-lg-12:first-child{
     font-size: 60px;
     font-weight: bold;
-    margin-left: 20px;
+    margin-left: 10px;
     height: fit-content;
     margin-top: 60px;
 
@@ -247,13 +253,9 @@ header, body{
 }
 
 @media only screen and (max-width: 750px){
-  /* DEBUGGING PURPOSES
-
   .home_container{
-    border: 1px solid red;
   }
-
-  */
+  /* DEBUGGER CODE ENDS HERE */
 
   .header_part .header_left ul li:nth-child(2){
     display: none;
