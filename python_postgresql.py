@@ -15,6 +15,9 @@ print("--------- Activity B --------- ")
 num1 = int(input("Enter number 1: "))
 num2 = int(input("Enter number 2: " ))
 
+while num1 == num2:
+    num2 = int(input("Enter a different number:"))
+
 if num1 < num2:
     for i in range(num1, num2):
         print(i)
