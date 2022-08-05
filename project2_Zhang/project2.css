@@ -1,4 +1,16 @@
 *{box-sizing: border-box;}
+
+/*HORIZONTAL SCROLLBAR DEBUGGER */
+
+/*
+outline: 1px solid #f00 !important;
+
+.slide-content .scroller {
+  width: 1024px;
+}
+
+*/
+
 header, body{
   font-family: 'Sulphur Point';
   font-size: 20px;
@@ -24,10 +36,22 @@ header, body{
   /*color: #56361B;*/
 }
 
+/* ROW COLUMN PERCENTAGES */
 .header_part:first-child {
   width: 30%;
   float: left;
 }
+
+.header_part:nth-child(2){
+  width: 40%;
+}
+
+.header_part:last-child{
+  width: 30%;
+}
+/*---------------------------*/
+
+
 .header_part .header_left:first-child img{
   margin-left: 20px;
 }
@@ -39,14 +63,6 @@ header, body{
 
 .header_part:first-child ul li:nth-child(2){
   margin-right: 5%;
-}
-
-.header_part:nth-child(2){
-  width: 40%;
-}
-
-.header_part:last-child{
-  width: 30%;
 }
 
 .header_left ul li {
@@ -67,18 +83,40 @@ header, body{
   margin-top: -5px;
 }
 
-.header_part:last-child ul li{
-  margin-left: 20px;
+/* RIGHT HEADER */
+.header_right{
+  float: right;
+  width: 100%;
+  overflow-x: hidden;
 }
 
-.header_right ul li {
-  display: inline-block;
+.header_right ul {
+  margin-left: 15%;
+}
+
+.header_right ul li{
+  float: left;
   list-style: none;
+  display: inline-block;
+  margin-left: 10px;
 }
 
-.header_part:last-child ul:last-child img{
-  width: 50%;
+.header_right ul li img {
+  width: 55%;
 }
+
+.header_part .header_right ul li:first-child{
+  margin-left: 20%;
+}
+
+.header_part .header_right ul li:nth-child(2){
+  margin-left: 2%;
+}
+
+.header_part .header_right ul li:nth-child(2){
+  margin-right: 10px;
+}
+
 
 /* HOME TEXT + IMAGE */
 .home_container{
@@ -97,6 +135,7 @@ header, body{
 
 .container01_left_text0{
   height: 450px;
+  width: 95%;
 }
 
 .container01_left_text0 .col-lg-12:first-child{
@@ -105,6 +144,7 @@ header, body{
   margin-left: 20px;
   height: fit-content;
   margin-top: 60px;
+  width: 300px;
 }
 
 
@@ -185,9 +225,8 @@ header, body{
     margin-left: 20px;
     height: fit-content;
     margin-top: 60px;
+
   }
-
-
 
   .container01_left_text0 .col-lg-12:nth-child(2){
     font-size: 25px;
@@ -205,7 +244,7 @@ header, body{
   .home_container{
     border: 1px solid red;
   }
-  
+
   */
 
   .header_part .header_left ul li:nth-child(2){
@@ -222,9 +261,11 @@ header, body{
   .header_part .header_right ul li:nth-child(2){
     display: none;
   }
+
   .container01_left {
     height: 200px;
   }
+
 }
 
 /* BANNER 01 */
