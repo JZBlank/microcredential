@@ -76,7 +76,8 @@ kidsCategory.addEventListener('click', function(){
 
 function itemContent(n){
   for(let eachSlides = 0; eachSlides < numberSections; eachSlides++){
-    sections[eachSlides].style.display = 'none'
+    sections[eachSlides].style.visibility = 'hidden'
   }
-  sections[n - 1].style.display = 'block'
+
+  sections[n-1].style.visibility = 'visible'
 }
