@@ -44,3 +44,39 @@ function slideshow(n){
   }
   slides[currentSlide-1].style.display = 'block'
 }
+
+
+// SHOP CATEGORIES
+const sections = document.querySelectorAll('.shopCollections .row')
+const menCategory = document.querySelector('#mBicycles')
+const womenCategory =  document.querySelector('#fBicycles')
+const kidsCategory =  document.querySelector('#kBicycles')
+
+let currentSection = 1
+let numberSections = sections.length
+itemContent(currentSection)
+
+menCategory.addEventListener('click', function(){
+  currentSection = 1
+  console.log("MEN CLICKED")
+  itemContent(currentSection)
+})
+
+womenCategory.addEventListener('click', function(){
+  currentSection = 2
+  console.log("WOMEN")
+  itemContent(currentSection)
+})
+
+kidsCategory.addEventListener('click', function(){
+  currentSection = 3
+  console.log("KIDS")
+  itemContent(currentSection)
+})
+
+function itemContent(n){
+  for(let eachSlides = 0; eachSlides < numberSections; eachSlides++){
+    sections[eachSlides].style.display = 'none'
+  }
+  sections[n - 1].style.display = 'block'
+}

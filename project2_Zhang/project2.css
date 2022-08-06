@@ -487,6 +487,7 @@ header, body{
 /* CONTAINER 3 - BIKE TYPES */
 .container03{
   padding-top: 100px;
+  overflow: hidden;
 }
 
 .container03_title{
@@ -757,8 +758,9 @@ header, body{
 
 /* SHOP ITEMS */
 .shopCollections{
-  width: 80%;
+  width: 100%;
   padding-bottom: 50px;
+  border: 1px solid green;
 }
 
 .shopCollectionsTitle{
@@ -768,12 +770,39 @@ header, body{
   font-size: 35px;
 }
 
+.shopCollections .categoryList{
+  width: 100%;
+}
+
+.shopCollections .categoryList .categoryItem{
+  display: inline-block;
+}
+
+.shopCollections .row{
+  border: 5px solid red;
+}
+
+
 .shopCollections .item{
   margin-top: 20px;
-  margin-left: 50px;
+  margin-left: 40px;
   border: 1px solid black;
   width: 84%;
   height: 350px;
+}
+
+.shopCollections .row:first-child .item img{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.shopCollections .row:nth-child(2) .item img{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 @media only screen and (max-width: 990px){
