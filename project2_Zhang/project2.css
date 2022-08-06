@@ -14,6 +14,7 @@ outline: 1px solid #f00 !important;
 header, body{
   font-family: 'Sulphur Point';
   font-size: 20px;
+  scroll-behavior: auto;
 }
 
 /* HEADER SECTION */
@@ -157,7 +158,6 @@ header, body{
   width: 400px;
 }
 
-
 .container01_mid{
   height: 450px;
 }
@@ -170,7 +170,117 @@ header, body{
   height: 200px;
   width: 50%;
   float: left;
+  position: relative;
 }
+
+
+/* Buy Now + shopNow Button */
+/* box1 - women*/
+
+.container01_mid_top0:first-child img:hover{
+  filter: brightness(0.5);
+  transition-duration: 0.2s;
+}
+
+/*
+.container01_mid_bottom a:hover + img{
+  filter: brightness(0.5);
+  transition-duration: 0.2s;
+}
+*/
+
+.container01_mid_top0:first-child a:hover + img{
+  filter: brightness(0.5);
+  transition-duration: 0.2s;
+}
+
+.container01_mid_top0:last-child a:hover + img{
+  filter: brightness(0.5);
+  transition-duration: 0.2s;
+}
+
+.container01_mid_top0:first-child:hover .buyNowTitle{
+  position: absolute;
+  z-index: 10;
+  opacity: 100;
+}
+
+/* box2 - men*/
+.container01_mid_top0:last-child img:hover{
+  filter: brightness(0.5);
+  transition-duration: 0.2s;
+}
+
+.container01_mid_top0:last-child:hover .buyNowTitle{
+  position: absolute;
+  z-index: 10;
+  opacity: 100;
+}
+
+/* box 3 - kids */
+.container01_mid_bottom img:hover{
+  filter: brightness(0.5);
+  transition-duration: 0.2s;
+}
+
+.container01_mid_bottom:hover .buyNowTitle1{
+  position: absolute;
+  z-index: 10;
+  opacity: 100;
+}
+
+.buyNowTitle{
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: 40%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: #FFC046;
+  width: fit-content;
+  padding: 5px;
+  border-radius: 5px;
+  opacity: 0;
+  text-decoration: none;
+  color: black;
+  z-index: 2;
+}
+
+
+.container01_mid_bottom{
+  position: relative;
+}
+
+.buyNowTitle1{
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: #FFC046;
+  width: fit-content;
+  padding: 5px;
+  border-radius: 5px;
+  opacity: 0;
+  text-decoration: none;
+  color: black;
+  z-index: 2;
+  top: 40%;
+}
+
+.buyNowTitle:hover, .buyNowTitle1:hover{
+  color: black;
+}
+
+.container01_mid_bottom a:hover + img{
+  filter: brightness(0.5);
+  transition-duration: 0.2s;
+}
+
+
+/* END of hoverEffect */
 
 .container01_mid_top0 img{
   width: 100%;
