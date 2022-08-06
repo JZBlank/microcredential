@@ -298,8 +298,15 @@ header, body{
 }
 
 .container01_right{
+  background-color: black;
+}
+
+.slideAuto{
+  width: 100%;
   height: 450px;
-  background-color: green;
+  display: none;
+  animation: fadeAnimation 0.1s;
+  animation-duration: 3s;
 }
 
 .container01_right img{
@@ -489,43 +496,51 @@ header, body{
   padding-bottom: 10px;
 }
 
-.container03_bikeL0{
-  width: 100%;
-}
-
-.container03_bikeL0:last-child{
-  width: 100%;
-  padding-bottom: 50px;
-}
-
-.container03_bikeL0 .row .col-lg-3{
+/* CHOOSE BIKE MANUAL TEXT SLIDESHOW */
+.chooseBikeRow{
   text-align: center;
-  border-right: 1px solid black;
+  position: relative;
+  height: 400px;
+  transition-duration: 0.2s;
 }
 
-.container03_bikeL0 .row .col-sm-12{
-  text-align: center;
-  border-right: none;
+.manualTextSlide{
+  display: block;
+  user-select: none;
 }
 
-.container03_bikeL0 .row .col-lg-3:last-child{
-  text-align: center;
-  border-right: none;
+@keyframes slideAnimation{
+  0%{opacity: 1;}
+  100%{opacity: 0;}
 }
 
-
-.bike_list{
-  width: 100%;
-  height: 50px;
-  text-align: center;
-  padding-bottom: 10px;
+.prev, .next{
+  position: absolute;
+  top: 0%;
+  font-size: 1.5em;
+  color: black;
+  display: inline-block;
+  padding: 1em;
+  text-decoration: none;
+  margin-top: 100px;
+  user-select: none;
 }
 
-.bike_list_row{
-  margin-top: 10px;
+.prev{
+  left: 1px;
 }
 
+.next{
+  right: 1px;
+}
 
+.chooseBikeRow img{
+  margin-top: 50px;
+  width: 30%;
+  user-select: none;
+}
+
+/* BIKE IMAGE AND DESCRIPTION */
 .container03_bike_img{
   height: 400px;
 }
