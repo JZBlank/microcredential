@@ -58,19 +58,25 @@ itemContent(currentSection)
 
 menCategory.addEventListener('click', function(){
   currentSection = 1
-  console.log("MEN CLICKED")
+  kidsCategory.style.textDecoration = 'none'
+  womenCategory.style.textDecoration = 'none'
+  menCategory.style.textDecoration = 'underline'
   itemContent(currentSection)
 })
 
 womenCategory.addEventListener('click', function(){
   currentSection = 2
-  console.log("WOMEN")
+  kidsCategory.style.textDecoration = 'none'
+  womenCategory.style.textDecoration = 'underline'
+  menCategory.style.textDecoration = 'none'
   itemContent(currentSection)
 })
 
 kidsCategory.addEventListener('click', function(){
   currentSection = 3
-  console.log("KIDS")
+  kidsCategory.style.textDecoration = 'underline'
+  womenCategory.style.textDecoration = 'none'
+  menCategory.style.textDecoration = 'none'
   itemContent(currentSection)
 })
 

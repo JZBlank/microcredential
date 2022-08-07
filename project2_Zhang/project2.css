@@ -177,50 +177,55 @@ header, body{
 /* Buy Now + shopNow Button */
 /* box1 - women*/
 
-.container01_mid_top0:first-child img:hover{
+.container01_mid_top0{
+  overflow: hidden;
+}
+
+.container01_mid_top0 img{
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+.container01_mid_top0 img:hover{
+  filter: brightness(0.5);
+  transition: 0.2s;
+  transform: scale(1.2);
+}
+
+.container01_mid_top0 a:hover + img{
   filter: brightness(0.5);
   transition-duration: 0.2s;
+  transform: scale(1.2);
 }
 
-/*
-.container01_mid_bottom a:hover + img{
-  filter: brightness(0.5);
-  transition-duration: 0.2s;
-}
-*/
-
-.container01_mid_top0:first-child a:hover + img{
-  filter: brightness(0.5);
-  transition-duration: 0.2s;
-}
-
-.container01_mid_top0:last-child a:hover + img{
-  filter: brightness(0.5);
-  transition-duration: 0.2s;
-}
-
-.container01_mid_top0:first-child:hover .buyNowTitle{
-  position: absolute;
-  z-index: 10;
-  opacity: 100;
-}
-
-/* box2 - men*/
-.container01_mid_top0:last-child img:hover{
-  filter: brightness(0.5);
-  transition-duration: 0.2s;
-}
-
-.container01_mid_top0:last-child:hover .buyNowTitle{
+.container01_mid_top0:hover .buyNowTitle{
   position: absolute;
   z-index: 10;
   opacity: 100;
 }
 
 /* box 3 - kids */
+
+
+.container01_mid_bottom{
+  overflow: hidden;
+}
+
+.container01_mid_bottom img{
+  overflow: hidden;
+  transition: 0.2s;
+}
+
 .container01_mid_bottom img:hover{
   filter: brightness(0.5);
+  transition: 0.2s;
+  transform: scale(1.1);
+}
+
+.container01_mid_bottom a:hover + img{
+  filter: brightness(0.5);
   transition-duration: 0.2s;
+  transform: scale(1.1);
 }
 
 .container01_mid_bottom:hover .buyNowTitle1{
@@ -668,7 +673,6 @@ header, body{
 .container05_title{
   height: 500px;
   width: 100%;
-  border: 1px solid green;
 }
 
 .container05_content{
@@ -740,6 +744,7 @@ header, body{
   overflow: auto;
   text-align: center;
 }
+
 .banner03_text{
   margin-left: auto;
   margin-right: auto;
@@ -760,25 +765,42 @@ header, body{
 .shopCollections{
   width: 100%;
   padding-bottom: 50px;
-  border: 1px solid green;
-  height: 600px;
+  height: 650px;
   position: relative;
 }
 
 .shopCollectionsTitle{
-  margin-left: 50px;
   margin-top: 30px;
   font-weight: bold;
   font-size: 35px;
+  text-align: center;
 }
 
 .shopCollections .categoryList{
   width: 100%;
+  text-align: center;
+  font-size: 25px;
+  padding-bottom: 10px;
 }
+
 
 .shopCollections .categoryList .categoryItem{
   display: inline-block;
+  margin: 30px;
+  transition-duration: 0.2s;
 }
+
+.shopCollections .categoryList .categoryItem:hover{
+  transform: scale(1.5);
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+
+.shopCollections .categoryList .categoryItem:first-child{
+  text-decoration: underline;
+  padding-bottom: 10px;
+}
+
 
 
 .shopCollections .row:first-child {
@@ -798,29 +820,21 @@ header, body{
 
 .shopCollections .item{
   margin-top: 20px;
-  border: 1px solid black;
   width: 100%;
   height: 350px;
 }
 
-.shopCollections .row:first-child .item img{
+/*SHOP BIKES IMG DIMENSIONS */
+.shopCollections .row .item img{
   width: 100%;
   height: 40%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;;
-}
-
-.shopCollections .row:nth-child(2) .item img{
-  width: 80%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
 
-/*SHOP BIKES IMG DIMENSIONS */
-.shopCollections .row:first-child .item .bikeImg_contain{
-  border: 5px solid green;
+
+.shopCollections .row .item .bikeImg_contain{
   width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -828,21 +842,62 @@ header, body{
   text-align: center;
 }
 
-
-@media only screen and (max-width: 990px){
-  .shopCollections .item{
-    margin-top: 50px;
-    border: 1px solid black;
-    width: 100%;
-    height: 300px;
-  }
+.bikeShadow{
+  margin-left: auto;
+  margin-right: auto;
+  height: 10px;
+  border-radius: 40%;
+  background-color: black;
+  opacity: 0.5;
+  width: 80%;
+  margin-top: -10px;
+  z-index: -1;
+  filter: blur(3px);
 }
 
-@media only screen and (max-width: 750px){
+
+
+/* BIKE STATS INFO */
+
+.checkitemInfo{
+  width: 100%;
+  height: 100px;
+  margin-top: 20px;
+}
+
+.item_name{
+  text-align: center;
+  font-size: 25px;
+}
+
+.checkitemInfoText{
+  background-color: #F2CEAF;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* BIKE DIMENSIONS END */
+
+
+@media only screen and (max-width: 990px){
   .shopCollections {
     height: 1500px;
-    border: 1px solid blue;
   }
-  /* Make height of containers longer in small screen */
+
+  .shopCollections .row .item img{
+    width: 60%;
+    height: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .shopCollections .row .bikeShadow{
+    width: 55%;
+  }
+
 
 }
