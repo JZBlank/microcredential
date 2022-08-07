@@ -84,6 +84,51 @@ function itemContent(n){
   for(let eachSlides = 0; eachSlides < numberSections; eachSlides++){
     sections[eachSlides].style.visibility = 'hidden'
   }
-
   sections[n-1].style.visibility = 'visible'
 }
+
+// MANUAL + AUTOMATIC CIRCLE SLIDESHOW
+const circle1 = document.querySelector('#c1')
+const circle2 =  document.querySelector('#c2')
+const circle3 =  document.querySelector('#c3')
+
+const clientQuote = document.querySelector('.container05_clientQuote')
+
+let currentCSlide = 0
+circle1.style.backgroundColor = '#F2CEAF'
+
+// ORIGINAL
+clientQuote.innerHTML = "<b>Exceeded my expectations</b><br> I bought a bike not expecting much but I was pleasantly surprised by its amazing performance. <br><span style='float:right;'>-Jenna</span>"
+
+circle1.addEventListener('click', function(){
+  currentCSlide = 0
+  circle1.style.backgroundColor = '#F2CEAF'
+  circle2.style.backgroundColor = 'black'
+  circle3.style.backgroundColor = 'black'
+
+  document.getElementById("imgPFP").src = "img/customer_01.jpg";
+  clientQuote.innerHTML = "<b>Exceeded my expectations</b><br> I bought a bike not expecting much but I was pleasantly surprised by its amazing performance. <br><span style='float:right;'>-Jenna</span>"
+
+})
+
+circle2.addEventListener('click', function(){
+  currentCSlide = 1
+  circle2.style.backgroundColor = '#F2CEAF'
+  circle3.style.backgroundColor = 'black'
+  circle1.style.backgroundColor = 'black'
+
+  document.getElementById("imgPFP").src = "img/customer_02.jpg";
+  clientQuote.innerHTML = "<b>10/10 Quality</b><br> The qualities of these bikes are AMAZING. Bikery is the real deal. <br><br><span style='float: right; margin-right: 100px;'> -Kevin</span>"
+
+})
+
+circle3.addEventListener('click', function(){
+  currentCSlide = 2
+  circle3.style.backgroundColor = '#F2CEAF'
+  circle2.style.backgroundColor = 'black'
+  circle1.style.backgroundColor = 'black'
+
+  document.getElementById("imgPFP").src = "img/customer_03.jpg";
+  clientQuote.innerHTML = "<b>Amazing bike</b><br> I love my bike. It was worth every penny. My only regret was not finding Bikery sooner.<br><span style='float: right; margin-right: 40px;'> -Rachel</span>"
+
+})

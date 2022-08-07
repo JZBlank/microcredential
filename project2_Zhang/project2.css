@@ -132,7 +132,6 @@ header, body{
 
 .container01_left{
   height: 450px;
-  background-color: #F2CEAF;
 }
 
 .container01_left_text0{
@@ -242,7 +241,7 @@ header, body{
   left: 0;
   right: 0;
   text-align: center;
-  background-color: #FFC046;
+  background-color: #F2CEAF;
   width: fit-content;
   padding: 5px;
   border-radius: 5px;
@@ -250,6 +249,14 @@ header, body{
   text-decoration: none;
   color: black;
   z-index: 2;
+}
+
+.buyNowTitle:hover{
+  background-color: black;
+}
+
+.buyNowTitle:hover .buyNowTxt{
+  color: white;
 }
 
 
@@ -264,7 +271,7 @@ header, body{
   left: 0;
   right: 0;
   text-align: center;
-  background-color: #FFC046;
+  background-color: #F2CEAF;
   width: fit-content;
   padding: 5px;
   border-radius: 5px;
@@ -275,9 +282,14 @@ header, body{
   top: 40%;
 }
 
-.buyNowTitle:hover, .buyNowTitle1:hover{
-  color: black;
+.buyNowTitle1:hover{
+  background-color: black;
 }
+
+.buyNowTitle1:hover .buyNowTxt{
+  color: white;
+}
+
 
 .container01_mid_bottom a:hover + img{
   filter: brightness(0.5);
@@ -455,16 +467,10 @@ header, body{
 }
 
 .container02_subtitle{
-  font-size: 20px;
+  font-size: 30px;
   text-align: center;
-  padding-bottom: 50px;
-  margin-top: 10px;
 }
 
-.container02_section{
-  height: 300px;
-  background-color: #F1F1F1;
-}
 
 .container02 .col-lg-4{
   margin-left: auto;
@@ -474,25 +480,26 @@ header, body{
 
 .icons {
   width: 20%;
-  border: 4px solid #FFC046;
+  height: 50%;
   border-radius: 50%;
   padding: 10px;
 }
+
 
 .container02_icon{
   padding-top: 30px;
 }
 
 .container02_text {
-  padding-top: 50px;
-  padding-left: 10px;
+  width: 100%;
+  text-align: center;
 }
 
 
 /* CONTAINER 3 - BIKE TYPES */
 .container03{
-  padding-top: 100px;
   overflow: hidden;
+  margin-top: 100px;
 }
 
 .container03_title{
@@ -500,6 +507,13 @@ header, body{
   font-size: 30px;
   font-weight: bold;
   padding-bottom: 10px;
+}
+
+hr{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
 }
 
 /* CHOOSE BIKE MANUAL TEXT SLIDESHOW */
@@ -519,12 +533,14 @@ header, body{
   user-select: none;
 }
 
+.manualTextSlide img{
+  width: 80%;
+}
 
 .manualTextSlide img:hover{
   filter: brightness(0);
   transition-duration: 0.2s;
 }
-
 
 
 @keyframes slideAnimation{
@@ -586,16 +602,32 @@ header, body{
   height: 400px;
 }
 
-.container03_bike_text{
-  width: 90%;
-  height: 400px;
-  margin-top: 5px;
-  padding: 15px;
+
+@media only screen and (max-width: 950px){
+  .manualTextSlide img{
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 750px){
+  .bikeInfoText{
+    width: 100%;
+  }
+
+  .bikeInfoCenter{
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .manualTextSlide img{
+    width: 50%;
+  }
 }
 
 /* BANNER 02 */
 .banner02{
-  background-color: #F1F1F1;
+  background-color: #F2CEAF;
   height: 80px;
   padding-top: 20px;
   width: 100%;
@@ -619,7 +651,7 @@ header, body{
 
 /* Container 04 - Sales */
 .container04_sales{
-  background-color: #F1F1F1;
+  background-color: #F2CEAF;
   padding-bottom: 50px;
   position: relative;
 }
@@ -670,6 +702,7 @@ header, body{
 }
 
 /*Container 05 TITLE */
+
 .container05_title{
   height: 500px;
   width: 100%;
@@ -687,14 +720,14 @@ header, body{
   width: fit-content;
   color: black;
   margin-top: 30px;
-  font-size: 25px;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 /* Container 05 (CLIENTS)*/
 
 .container05_clientContainer{
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 100px;
 }
 
 .container05_img_crop{
@@ -707,8 +740,8 @@ header, body{
   margin-right: auto;
 }
 
-.container05_img_crop img{
-  width: 200%;
+.container05_img_crop img:last-child{
+  width: 150%;
   margin: -20px 20px 30px -70px;
 }
 
@@ -716,6 +749,37 @@ header, body{
   height: 150px;
   text-align: left;
   margin-left: 40px;
+}
+
+.circleTransition{
+  width: 100%;
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+.circleTransitionCenter{
+  height: 30px;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.circleCenter{
+  width: 100%;
+  height: 30px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.circle0{
+  border-radius: 50%;
+  float: left;
+  height: 10px;
+  width: 10px;
+  text-align: center;
+  margin: 10px;
+  background-color: black;
 }
 
 @media only screen and (max-width: 990px){
@@ -842,6 +906,7 @@ header, body{
   text-align: center;
 }
 
+
 .bikeShadow{
   margin-left: auto;
   margin-right: auto;
@@ -882,6 +947,104 @@ header, body{
 /* BIKE DIMENSIONS END */
 
 
+/* SHOP COLLECTIONS 2 */
+
+.shopCollectionsR{
+  width: 100%;
+}
+
+.shopCollectionsRTitle{
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 30px;
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+.shopCollectionsR .row{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.shopCollectionsR .containerBike{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  width: 90%;
+  border: 1px solid black;
+  transition: 0.2s;
+  background-color: white;
+}
+
+.shopCollectionsR .containerBike:hover{
+  transform: scale(1.1);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.shopCollectionsR .row img{
+  width: 60%;
+}
+
+.bikeShadow2{
+  margin-left: auto;
+  margin-right: auto;
+  height: 10px;
+  border-radius: 40%;
+  background-color: black;
+  opacity: 0.5;
+  width: 50%;
+  margin-top: -10px;
+  z-index: -1;
+  filter: blur(3px);
+}
+
+.bikeInfo{
+  margin-top: 10px;
+}
+.bikeBars{
+  width: 100%;
+  height: 50px;
+  text-align: center;
+}
+
+.bar1{
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fillBar{
+  width: 80%;
+  height: 30px;
+  background-color: black;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stars{
+  text-shadow: 0 0 0 #F2CEAF;
+  color: transparent;
+}
+
+/* END SHOP COLLECTIONS 2 */
+
+
+/* FOOTER */
+.footerS{
+  width: 100%;
+}
+
+
+/* FOOTER END */
+
+
 @media only screen and (max-width: 990px){
   .shopCollections {
     height: 1500px;
@@ -898,6 +1061,4 @@ header, body{
   .shopCollections .row .bikeShadow{
     width: 55%;
   }
-
-
 }
