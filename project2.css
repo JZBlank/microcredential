@@ -787,7 +787,21 @@ header, body{
 .shopCollections .categoryList .categoryItem{
   display: inline-block;
   margin: 30px;
+  transition-duration: 0.2s;
 }
+
+.shopCollections .categoryList .categoryItem:hover{
+  transform: scale(1.5);
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+
+.shopCollections .categoryList .categoryItem:first-child{
+  text-decoration: underline;
+  padding-bottom: 10px;
+}
+
+
 
 .shopCollections .row:first-child {
   position: absolute;
