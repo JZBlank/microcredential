@@ -26,6 +26,15 @@ header, body{
   padding-top: 15px;
 }
 
+a{
+  text-decoration: none;
+  color: black;
+}
+
+a:hover{
+  color: black;
+}
+
 .header_row {
   width: 100%;
 }
@@ -1038,7 +1047,39 @@ hr{
 
 /* FOOTER */
 .footerS{
+  margin-top: 100px;
   width: 100%;
+  height: 150px;
+  background-color: black;
+}
+
+.footerS .row .section{
+  margin-top: 10px;
+  height: 100px;
+  text-align: center;
+}
+
+.sectionText{
+  color: white;
+  margin-left: 50px;
+  text-align: left;
+}
+
+.credentials{
+  width: 100%;
+  text-align: center;
+  background-color: black;
+}
+
+.credentials .CText{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid white;
 }
 
 
