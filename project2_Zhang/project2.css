@@ -1133,13 +1133,15 @@ hr{
 
 /* MODAL WINDOWS */
 
-.closeModal{
+
+
+#closeModal0, #closeModal1{
   padding: 5px 10px 10px 10px;
   float: right;
 }
 
 
-.modalWindow{
+.modalWindow0, .modalWindow1, .modalWindow2, .modalWindow3, .modalWindow4, .modalWindow5, .modalWindow6, .modalWindow7{
   background-color: rgba(50,50,50,0.8);
   position: fixed;
   top: 0%;

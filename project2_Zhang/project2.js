@@ -163,84 +163,61 @@ circle3.addEventListener('click', function(){
 })
 
 /* MODAL WINDOWS */
-const getitemNum = document.querySelectorAll('.bikeImg_contain')
-const openItem = document.querySelectorAll('.checkitemInfoText')
-const closeModal = document.querySelector('.closeModal')
+const openItem0 = document.querySelector('#openItem0')
+const openItem1 = document.querySelector('#openItem1')
+const openItem2 = document.querySelector('#openItem2')
+const openItem3 = document.querySelector('#openItem3')
+const openItem4 = document.querySelector('#openItem4')
+const openItem5 = document.querySelector('#openItem5')
+const openItem6 = document.querySelector('#openItem6')
+const openItem7 = document.querySelector('#openItem7')
 
-const item0 = openItem[0]
-const item1 = openItem[1]
-const item2 = openItem[2]
-const item3 = openItem[3]
-const item4 = openItem[4]
-const item5 = openItem[5]
-const item6 = openItem[6]
-const item7 = openItem[7]
-const item8 = openItem[8]
+const modalWindow0 = document.querySelector('.modalWindow0')
+const modalWindow1= document.querySelector('.modalWindow1')
+const modalWindow2= document.querySelector('.modalWindow2')
+const modalWindow3= document.querySelector('.modalWindow3')
+const modalWindow4= document.querySelector('.modalWindow4')
+const modalWindow5= document.querySelector('.modalWindow5')
+const modalWindow6= document.querySelector('.modalWindow6')
+const modalWindow7= document.querySelector('.modalWindow7')
+
+const closeModal = document.querySelector('#closeModal')
+
+
+openItem0.addEventListener('click', function(){
+  modalWindow0.style.display = 'block'
+})
+
+openItem1.addEventListener('click', function(){
+  modalWindow1.style.display = 'block'
+})
+
+closeModal0.addEventListener('click', function(){
+  modalWindow0.style.display = 'none'
+})
+
+closeModal1.addEventListener('click', function(){
+  modalWindow1.style.display = 'none'
+})
+
+/* TESTTTT
+closeModal.addEventListener('click', function(){
+  modalWindow0.style.display = 'none'
+  modalWindow1.style.display = 'none'
+  modalWindow2.style.display = 'none'
+  modalWindow3.style.display = 'none'
+  modalWindow4.style.display = 'none'
+  modalWindow5.style.display = 'none'
+  modalWindow6.style.display = 'none'
+  modalWindow7.style.display = 'none'
+})
+*/
 
 
 /* MODAL WINDOW MODIFICATIONS */
-const modalWindow = document.querySelector('.modalWindow')
-openModalWindow()
-
-function openModalWindow(){
-  // MEN BIKES
-  item0.addEventListener('click', function(){
-    document.getElementById("bikeImg0").src = "img/img_bikes/men/b1.png";
-    document.getElementById("bikePrice").innerHTML = '$200'
-    modalWindow.style.display = 'block'
-  })
-  item1.addEventListener('click', function(){
-    document.getElementById("bikeImg0").src = "img/img_bikes/men/b2.png";
-    document.getElementById("bikePrice").innerHTML = '$300'
-    modalWindow.style.display = 'block'
-  })
-  item2.addEventListener('click', function(){
-    document.getElementById("bikeImg0").src = "img/img_bikes/men/b3.png";
-    document.getElementById("bikePrice").innerHTML = '$300'
-    modalWindow.style.display = 'block'
-  })
-
-  // WOMEN BIKES
-  item3.addEventListener('click', function(){
-    document.getElementById("bikeImg0").src = "img/img_bikes/women/b1.png";
-    document.getElementById("bikePrice").innerHTML = '$300'
-    modalWindow.style.display = 'block'
-  })
-  item4.addEventListener('click', function(){
-    document.getElementById("bikeImg0").src = "img/img_bikes/women/b2.png";
-    document.getElementById("bikePrice").innerHTML = '$300'
-    modalWindow.style.display = 'block'
-  })
-  item5.addEventListener('click', function(){
-    document.getElementById("bikeImg0").src = "img/img_bikes/women/b3.png";
-    document.getElementById("bikePrice").innerHTML = '$300'
-    modalWindow.style.display = 'block'
-  })
-
-
-  // KIDS
-  item6.addEventListener('click', function(){
-    document.getElementById("bikeImg0").src = "img/img_bikes/kids/b1.png";
-    document.getElementById("bikePrice").innerHTML = '$100'
-    modalWindow.style.display = 'block'
-  })
-  item7.addEventListener('click', function(){
-    document.getElementById("bikeImg0").src = "img/img_bikes/kids/b2.png";
-    document.getElementById("bikePrice").innerHTML = '$100'
-    modalWindow.style.display = 'block'
-  })
-  item8.addEventListener('click', function(){
-    document.getElementById("bikeImg0").src = "img/img_bikes/kids/b3.png";
-    document.getElementById("bikePrice").innerHTML = '$100'
-    modalWindow.style.display = 'block'
-  })
-}
-
-closeModal.addEventListener('click', function(){
-  modalWindow.style.display = 'none'
-})
-
 /* STORE DATA - ADD TO CART */
+
+/*
 let addItem = document.querySelector('.addItem')
 let bikeName = document.getElementById("bikeName").innerHTML
 let price = document.getElementById("bikePrice").innerHTML
@@ -251,3 +228,5 @@ addItem.addEventListener('click', function(){
   sessionStorage.setItem("BikeName", bikeName);
   sessionStorage.setItem("Price", price);
 })
+
+*/
