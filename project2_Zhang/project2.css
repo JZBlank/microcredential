@@ -61,14 +61,13 @@ a:hover{
 }
 /*---------------------------*/
 
-
 .header_part .header_left:first-child img{
   margin-left: 20px;
 }
 
 .header_part:first-child ul{
   overflow: auto;
-  padding-left: 0;
+  padding-left: 10;
 }
 
 .header_part:first-child ul li:nth-child(2){
@@ -401,10 +400,6 @@ a:hover{
   }
   /* DEBUGGER CODE ENDS HERE */
 
-  .header_part .header_left ul li:nth-child(2){
-    display: none;
-  }
-
   .header_part .header_left ul li:last-child{
     display: none;
   }
@@ -466,6 +461,9 @@ a:hover{
   padding: 5px;
 }
 
+.banner01_shopNow a{
+  color: white;
+}
 
 /* CONTAINER2 - COMPANY INFO_CONTAINER*/
 .container02_title{
