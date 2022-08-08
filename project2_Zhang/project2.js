@@ -163,13 +163,91 @@ circle3.addEventListener('click', function(){
 })
 
 /* MODAL WINDOWS */
-const openItem1 = document.querySelector("#openItem1")
-const closeModal = document.querySelector('#closeModal')
-const modalWindow = document.querySelector('.modalWindow')
+const getitemNum = document.querySelectorAll('.bikeImg_contain')
+const openItem = document.querySelectorAll('.checkitemInfoText')
+const closeModal = document.querySelector('.closeModal')
 
-openItem1.addEventListener('click', function(){
-  modalWindow.style.display = 'block'
-})
+const item0 = openItem[0]
+const item1 = openItem[1]
+const item2 = openItem[2]
+const item3 = openItem[3]
+const item4 = openItem[4]
+const item5 = openItem[5]
+const item6 = openItem[6]
+const item7 = openItem[7]
+const item8 = openItem[8]
+
+
+/* MODAL WINDOW MODIFICATIONS */
+const modalWindow = document.querySelector('.modalWindow')
+openModalWindow()
+
+function openModalWindow(){
+  // MEN BIKES
+  item0.addEventListener('click', function(){
+    document.getElementById("bikeImg0").src = "img/img_bikes/men/b1.png";
+    document.getElementById("bikePrice").innerHTML = '$200'
+    modalWindow.style.display = 'block'
+  })
+  item1.addEventListener('click', function(){
+    document.getElementById("bikeImg0").src = "img/img_bikes/men/b2.png";
+    document.getElementById("bikePrice").innerHTML = '$300'
+    modalWindow.style.display = 'block'
+  })
+  item2.addEventListener('click', function(){
+    document.getElementById("bikeImg0").src = "img/img_bikes/men/b3.png";
+    document.getElementById("bikePrice").innerHTML = '$300'
+    modalWindow.style.display = 'block'
+  })
+
+  // WOMEN BIKES
+  item3.addEventListener('click', function(){
+    document.getElementById("bikeImg0").src = "img/img_bikes/women/b1.png";
+    document.getElementById("bikePrice").innerHTML = '$300'
+    modalWindow.style.display = 'block'
+  })
+  item4.addEventListener('click', function(){
+    document.getElementById("bikeImg0").src = "img/img_bikes/women/b2.png";
+    document.getElementById("bikePrice").innerHTML = '$300'
+    modalWindow.style.display = 'block'
+  })
+  item5.addEventListener('click', function(){
+    document.getElementById("bikeImg0").src = "img/img_bikes/women/b3.png";
+    document.getElementById("bikePrice").innerHTML = '$300'
+    modalWindow.style.display = 'block'
+  })
+
+
+  // KIDS
+  item6.addEventListener('click', function(){
+    document.getElementById("bikeImg0").src = "img/img_bikes/kids/b1.png";
+    document.getElementById("bikePrice").innerHTML = '$100'
+    modalWindow.style.display = 'block'
+  })
+  item7.addEventListener('click', function(){
+    document.getElementById("bikeImg0").src = "img/img_bikes/kids/b2.png";
+    document.getElementById("bikePrice").innerHTML = '$100'
+    modalWindow.style.display = 'block'
+  })
+  item8.addEventListener('click', function(){
+    document.getElementById("bikeImg0").src = "img/img_bikes/kids/b3.png";
+    document.getElementById("bikePrice").innerHTML = '$100'
+    modalWindow.style.display = 'block'
+  })
+}
+
 closeModal.addEventListener('click', function(){
   modalWindow.style.display = 'none'
+})
+
+/* STORE DATA - ADD TO CART */
+let addItem = document.querySelector('.addItem')
+let bikeName = document.getElementById("bikeName").innerHTML
+let price = document.getElementById("bikePrice").innerHTML
+
+
+
+addItem.addEventListener('click', function(){
+  sessionStorage.setItem("BikeName", bikeName);
+  sessionStorage.setItem("Price", price);
 })

@@ -1124,7 +1124,7 @@ hr{
 }
 
 /* SEE DETAILS BUTTON */
-#openItem1:hover{
+.checkitemInfoText:hover{
   display: block;
   background-color: black;
   text-align: center;
@@ -1133,7 +1133,7 @@ hr{
 
 /* MODAL WINDOWS */
 
-#closeModal{
+.closeModal{
   padding: 5px 10px 10px 10px;
   float: right;
 }
