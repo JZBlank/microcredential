@@ -162,6 +162,9 @@ circle3.addEventListener('click', function(){
 
 })
 
+/* ITEMS IN BAG TRACKER */
+let cartItemNum = 0;
+
 /* MODAL WINDOWS */
 const getitemNum = document.querySelectorAll('.bikeImg_contain')
 const openItem = document.querySelectorAll('.checkitemInfoText')
@@ -196,6 +199,7 @@ function openModalWindow(){
     modalWindow.style.display = 'block'
 
     addItem.addEventListener('click', function(){
+
       sessionStorage.setItem("BikeName0", bikeName0);
       sessionStorage.setItem("BikePrice0", price0);
     })
@@ -210,6 +214,7 @@ function openModalWindow(){
     addItem.addEventListener('click', function(){
       sessionStorage.setItem("BikeName1", bikeName1);
       sessionStorage.setItem("BikePrice1", price1);
+
     })
 
   })
