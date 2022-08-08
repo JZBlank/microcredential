@@ -178,6 +178,11 @@ const item7 = openItem[7]
 const item8 = openItem[8]
 
 
+let addItem = document.querySelector('.addItem')
+let bikeName = document.getElementById("bikeName").innerHTML
+let price = document.getElementById("bikePrice").innerHTML
+
+
 /* MODAL WINDOW MODIFICATIONS */
 const modalWindow = document.querySelector('.modalWindow')
 openModalWindow()
@@ -191,13 +196,13 @@ function openModalWindow(){
     modalWindow.style.display = 'block'
   })
   item1.addEventListener('click', function(){
-    document.getElementById("bikeName").innerHTML = "A"
+    document.getElementById("bikeName").innerHTML = "B"
     document.getElementById("bikeImg0").src = "img/img_bikes/men/b2.png";
     document.getElementById("bikePrice").innerHTML = '$300'
     modalWindow.style.display = 'block'
   })
   item2.addEventListener('click', function(){
-    document.getElementById("bikeName").innerHTML = "A"
+    document.getElementById("bikeName").innerHTML = "C"
     document.getElementById("bikeImg0").src = "img/img_bikes/men/b3.png";
     document.getElementById("bikePrice").innerHTML = '$300'
     modalWindow.style.display = 'block'
@@ -234,14 +239,30 @@ function openModalWindow(){
   item7.addEventListener('click', function(){
     document.getElementById("bikeName").innerHTML = "A"
     document.getElementById("bikeImg0").src = "img/img_bikes/kids/b2.png";
-    document.getElementById("bikePrice").innerHTML = '$100'
+    document.getElementById("bikePrice").innerHTML = '$300'
     modalWindow.style.display = 'block'
+
+    addItem.addEventListener('click', function(){
+      bikeName = document.getElementById("bikeName").innerHTML
+      price = document.getElementById("bikePrice").innerHTML = '$300'
+      sessionStorage.setItem("BikeName1", bikeName);
+      sessionStorage.setItem("Price1", price);
+    })
+
   })
   item8.addEventListener('click', function(){
     document.getElementById("bikeName").innerHTML = "AAERAERERAERAERAERA"
     document.getElementById("bikeImg0").src = "img/img_bikes/kids/b3.png";
-    document.getElementById("bikePrice").innerHTML = '$100'
+    document.getElementById("bikePrice").innerHTML = '$900'
     modalWindow.style.display = 'block'
+
+    addItem.addEventListener('click', function(){
+      bikeName = document.getElementById("bikeName").innerHTML
+      price = document.getElementById("bikePrice").innerHTML = '$900'
+      sessionStorage.setItem("BikeName", bikeName);
+      sessionStorage.setItem("Price", price);
+    })
+
   })
 }
 
@@ -250,14 +271,3 @@ closeModal.addEventListener('click', function(){
 })
 
 /* STORE DATA - ADD TO CART */
-
-let addItem = document.querySelector('.addItem')
-let bikeName = document.getElementById("bikeName").innerHTML
-let price = document.getElementById("bikePrice").innerHTML
-
-
-
-addItem.addEventListener('click', function(){
-  sessionStorage.setItem("BikeName", bikeName);
-  sessionStorage.setItem("Price", price);
-})
