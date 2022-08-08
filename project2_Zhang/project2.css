@@ -154,7 +154,18 @@ a:hover{
   margin-left: 20px;
   height: fit-content;
   margin-top: 60px;
-  width: 300px;
+  width: 500px;
+  text-shadow: 2px 5px #F2CEAF;
+  animation-name: moveLeft;
+  opacity: 0;
+  animation-duration: 3s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes moveLeft {
+  0%{}
+  100%{opacity: 100%;}
 }
 
 
@@ -164,7 +175,19 @@ a:hover{
   position: absolute;
   top: 230px;
   width: 400px;
+  animation-name: moveLeft;
+  opacity: 0;
+  animation-duration: 3s;
+  animation-delay: 0.9s;
+  animation-fill-mode: forwards;
 }
+
+@keyframes moveLeft1 {
+  0%{}
+  100%{opacity: 100%;}
+}
+
+
 
 .container01_mid{
   height: 450px;
