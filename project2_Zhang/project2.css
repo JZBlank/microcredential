@@ -120,12 +120,13 @@ a:hover{
 
 .header_part .header_right ul li:nth-child(2){
   position: absolute;
-  right: 100px;
+  right: 130px;
 }
 
 .header_part .header_right ul li:last-child{
   position: absolute;
   right: 0px;
+  top: 10px;
 }
 
 
