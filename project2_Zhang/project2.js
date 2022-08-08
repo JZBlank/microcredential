@@ -45,13 +45,42 @@ function slideshow(n){
   slides[currentSlide-1].style.display = 'block'
 }
 
-
-// SHOP CATEGORIES
+// ARRIVAL CHOICES SECTION
 const sections = document.querySelectorAll('.shopCollections .row')
 const menCategory = document.querySelector('#mBicycles')
-const womenCategory =  document.querySelector('#fBicycles')
+const womenCategory = document.querySelector('#fBicycles')
 const kidsCategory =  document.querySelector('#kBicycles')
 
+// CLICK CATEGORY ICON IN CONTAINER01
+const cCategoryW = document.querySelector('#chooseW')
+const cCategoryM = document.querySelector('#chooseM')
+const cCategoryK = document.querySelector('#chooseK')
+
+cCategoryW.addEventListener('click', function(){
+  kidsCategory.style.textDecoration = 'none'
+  womenCategory.style.textDecoration = 'underline'
+  menCategory.style.textDecoration = 'none'
+  itemContent(2)
+})
+
+cCategoryM.addEventListener('click', function(){
+  kidsCategory.style.textDecoration = 'none'
+  womenCategory.style.textDecoration = 'none'
+  menCategory.style.textDecoration = 'underline'
+  itemContent(1)
+})
+
+cCategoryK.addEventListener('click', function(){
+  kidsCategory.style.textDecoration = 'underline'
+  womenCategory.style.textDecoration = 'none'
+  menCategory.style.textDecoration = 'none'
+  itemContent(3)
+})
+
+
+
+
+// SHOP CATEGORIES - ARRIVAL SECTION CODE
 let currentSection = 1
 let numberSections = sections.length
 itemContent(currentSection)
@@ -118,7 +147,7 @@ circle2.addEventListener('click', function(){
   circle1.style.backgroundColor = 'black'
 
   document.getElementById("imgPFP").src = "img/customer_02.jpg";
-  clientQuote.innerHTML = "<b>10/10 Quality</b><br> The qualities of these bikes are AMAZING. Bikery is the real deal. <br><br><span style='float: right; margin-right: 100px;'> -Kevin</span>"
+  clientQuote.innerHTML = "<b>High quality</b><br>Just bought a bike yesterday. Bike quality is IMPRESSIVE. Bikery is the real deal. <br><br><span style='float: right; margin-right: 100px;'> -Kevin</span>"
 
 })
 

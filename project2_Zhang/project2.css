@@ -1049,20 +1049,36 @@ hr{
 .footerS{
   margin-top: 100px;
   width: 100%;
-  height: 150px;
   background-color: black;
 }
 
 .footerS .row .section{
   margin-top: 10px;
-  height: 100px;
+  height: 150px;
   text-align: center;
 }
 
-.sectionText{
+.companyName{
+  text-align: center;
   color: white;
-  margin-left: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 45px;
+}
+
+.sectionText{
+  padding-top: 20px;
+  padding-bottom: 50px;
+  color: white;
+  margin-left: 75px;
   text-align: left;
+  font-size: 17px;
+}
+
+.sectionText img{
+  width: 10%;
+  background-color: white;
+  border-radius: 10px;
 }
 
 .credentials{
@@ -1081,6 +1097,7 @@ hr{
   padding-bottom: 10px;
   border-top: 1px solid white;
 }
+
 
 
 /* FOOTER END */
