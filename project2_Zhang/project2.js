@@ -161,3 +161,15 @@ circle3.addEventListener('click', function(){
   clientQuote.innerHTML = "<b>Amazing bike</b><br> I love my bike. It was worth every penny. My only regret was not finding Bikery sooner.<br><span style='float: right; margin-right: 40px;'> -Rachel</span>"
 
 })
+
+/* MODAL WINDOWS */
+const openItem1 = document.querySelector("#openItem1")
+const closeModal = document.querySelector('#closeModal')
+const modalWindow = document.querySelector('.modalWindow')
+
+openItem1.addEventListener('click', function(){
+  modalWindow.style.display = 'block'
+})
+closeModal.addEventListener('click', function(){
+  modalWindow.style.display = 'none'
+})
