@@ -945,7 +945,7 @@ hr{
   font-size: 25px;
 }
 
-.checkitemInfoText{
+.checkitemInfoText {
   background-color: #F2CEAF;
   width: 50%;
   margin-left: auto;
@@ -954,6 +954,45 @@ hr{
   border-radius: 10px;
   cursor: pointer;
 }
+
+.addItem{
+  background-color: #F2CEAF;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.addItem:hover{
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+
+.continueShop{
+  background-color: #F2CEAF;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.continueShop:hover{
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+
+.continueShop:hover a{
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+
 
 /* BIKE DIMENSIONS END */
 
@@ -1165,15 +1204,17 @@ hr{
 }
 
 .modalBikeName{
-  width: 50%;
-  float: left;
+  width: 100%;
+  text-align: center;
   color: black;
+  font-weight: bold;
 }
 
 .modalBikeNameCenter{
   font-size: 25px;
   color: black;
-  margin-left: 10%;
+  width: 100%;
+  margin-top: 30px;
 }
 
 .modalInfo{
@@ -1206,7 +1247,6 @@ hr{
 
 .modalBikePriceInfo{
   font-size: 30px;
-  border: 1px solid black;
 }
 
 .bikeShadow3{
@@ -1226,7 +1266,6 @@ hr{
 .modalFooter{
   height: 99px;
   margin-top: 150px;
-  background-color: #F2CEAF;
   padding: 1em;
   text-align: center;
 }
