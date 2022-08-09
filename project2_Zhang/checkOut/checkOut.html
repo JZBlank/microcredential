@@ -62,7 +62,7 @@
         <div class="col-lg-7 col-md-12 col-sm-12">
           <div class="itemsInfoContainer">
             <div class="left_containerTitle">
-              <h5>Items in your bag:</h5>
+              <h5>Shopping Cart</h5>
             </div>
             <div class="container-fluid">
               <div class="itemContainer">
@@ -89,7 +89,7 @@
                 <!-- END ITEM -->
 
                 <!-- ITEM -->
-                <div class="row item">
+                <div class="row gx-5 item">
                   <div class="col-lg-7 col-md-12 col-sm-12">
                     <div class="allItems">
                       <div class="section">
@@ -266,19 +266,99 @@
 
       <div class="col-lg-5 col-md-12 col-sm-12">
         <div class="totalPriceContainer">
+          <div class="container_rightTitle">
+            Summary
+          </div>
 
+          <div class="containerpriceInfo">
+            <div class="subtotal">
+              Subtotal : $0.00
+            </div>
+            <div class="shippingTotal">
+              Shipping : $0.00
+            </div>
+          </div>
         </div>
+        <div class="totalPrice">
+          Total Price: $0.00
+        </div>
+
+        <div class="container_rightTitle2">
+          Billing Information
+        </div>
+
+        <form class="" action="index.html" method="post">
+          <div class="text">First Name</div>
+          <input type="firstName" name="first_name" required value="" title="Your Info will
+          be safe with us" style="width:200px; width: 100%">
+
+          <div class="text">Last Name</div>
+          <input type="lastName" name="last_name" required value="" title="Your Info will
+          be safe with us" style="width:200px; width: 100%">
+
+          <div class="text">Email</div>
+          <input type="emailAddress" name="email_address" required value="" title="Your Info will
+          be safe with us" style="width:250px; width: 100%">
+
+        </form>
+
+        <div class="allButtons">
+          <div class="buttonLocation">
+            <button type="button" name="ClearCart" class="clearCart">Clear Cart</button>
+            <button type="button" name="Back" class="back"><a href="../project2.html">Continue Shopping</a></button>
+            <button type="submit" name="button"><a href="orderConfirmed.html">CheckOut</a></button>
+          </div>
+        </div>
+
       </div>
-
+      </div>
     </div>
-
-    </div>
-    <button type="button" name="ClearCart" class="clearCart">Clear Cart</button>
-    <button type="button" name="Back" class="back"><a href="../project2.html">Continue Shopping</a></button>
-    <button type="button" name="addToCart" class="addtoCart"><a href="templates/index.html">Checkout</a></button>
 
   </body>
-  <script type="text/javascript" src="checkOut.js">
 
-  </script>
+  <footer>
+    <div class="footerS" id="footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="section">
+              <div class="sectionText">
+                <b>Project 2: Sales Website</b>
+                <br>
+                <i>Information displayed on this webpage is only for educational purposes.</i>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="section">
+              <div class="sectionText">
+                <b>Contact Us</b>
+                <br>
+                Call +1 (626) 337 6135
+                <br>
+                Email:support@Bikery.com
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="section">
+              <div class="sectionText">
+                <b>Follow Us</b>
+                <br>
+                <a href="https://www.instagram.com/" target="_blank"><img src="../img/insta.png" alt="Icon of Instagram"></a>
+                <a href="https://www.facebook.com/" target="_blank"><img src="../img/fb.png" alt="Icon of Facebook"></a>
+                <a href="https://twitter.com/home"><img src="../img/twt.png" alt="Icon of Twitter"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <div class="credentials">
+        <div class="CText">
+          @Created and designed by Joyce Zhang 2022
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript" src="checkOut.js"></script>
 </html>
