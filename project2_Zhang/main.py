@@ -27,12 +27,7 @@ class Data(db.Model):
 # Homepage when application is ran
 @app.route("/")
 def home():
-    return render_template("project2.html")
-
-@app.route("/checkOut")
-def shoppingCart():
     return render_template("checkOut.html")
-
 
 # Handle the homepage when the form is submitted
 # request .method == "POST" is collecting the data of the form when submit button is clicked
