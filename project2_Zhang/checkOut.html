@@ -5,122 +5,130 @@
     <title>CheckOut</title>
     <style media="screen">
 
-      .containerItems .item{
+      .section{
         display: none;
+      }
+
+      .clearCart{
+        cursor: pointer;
       }
 
       .back a{
         text-decoration: none;
+        color: black;
       }
+
+      .addtoCart a{
+        text-decoration: none;
+        color: black;
+      }
+
     </style>
   </head>
   <body>
     <h1>Shopping Cart</h1>
     <h2>Items in your bag:</h2>
 
-    <div class="containerItems">
-      <div class="item">
-        <p>Item Name:<span id="storedBN0"></span></p>
-        <p>Price:<span id="storedP0"></span></p>
+    <div class="itemContainer">
+      <div class="allItems">
+        <div class="section">
+          <p>Item Name:<span id="storedItem0"></span></p>
+          <p>Price:<span id="storedPrice0"></span></p>
+        </div>
       </div>
 
-      <div class="item">
-        <p>Item Name:<span id="storedBN1"></span></p>
-        <p>Price:<span id="storedP1"></span></p>
+      <div class="allItems">
+        <div class="section">
+          <p>Item Name:<span id="storedItem1"></span></p>
+          <p>Price:<span id="storedPrice1"></span></p>
+        </div>
       </div>
 
-      <div class="item">
-      <p>Item Name:<span id="storedBN2"></span></p>
-      <p>Price:<span id="storedP2"></span></p>
+      <div class="allItems">
+        <div class="section">
+          <p>Item Name:<span id="storedItem2"></span></p>
+          <p>Price:<span id="storedPrice2"></span></p>
+        </div>
       </div>
 
-      <div class="item">
-        <p>Item Name:<span id="storedBN3"></span></p>
-        <p>Price:<span id="storedP3"></span></p>
+      <div class="allItems">
+        <div class="section">
+          <p>Item Name:<span id="storedItem3"></span></p>
+          <p>Price:<span id="storedPrice3"></span></p>
+        </div>
       </div>
 
-      <div class="item">
-        <p>Item Name:<span id="storedBN4"></span></p>
-        <p>Price:<span id="storedP4"></span></p>
+      <div class="allItems">
+        <div class="section">
+          <p>Item Name:<span id="storedItem4"></span></p>
+          <p>Price:<span id="storedPrice4"></span></p>
+        </div>
       </div>
 
-      <div class="item">
-        <p>Item Name:<span id="storedBN5"></span></p>
-        <p>Price:<span id="storedP5"></span></p>
+      <div class="allItems">
+        <div class="section">
+          <p>Item Name:<span id="storedItem5"></span></p>
+          <p>Price:<span id="storedPrice5"></span></p>
+        </div>
       </div>
 
-      <div class="item">
-        <p>Item Name:<span id="storedBN6"></span></p>
-        <p>Price:<span id="storedP6"></span></p>
+      <div class="allItems">
+        <div class="section">
+          <p>Item Name:<span id="storedItem6"></span></p>
+          <p>Price:<span id="storedPrice6"></span></p>
+        </div>
       </div>
 
-      <div class="item">
-        <p>Item Name:<span id="storedBN7"></span></p>
-        <p>Price:<span id="storedP7"></span></p>
-      </div>
-
-      <div class="item">
-        <p>Item Name:<span id="storedBN8"></span></p>
-        <p>Price:<span id="storedP8"></span></p>
+      <div class="allItems">
+        <div class="section">
+          <p>Item Name:<span id="storedItem7"></span></p>
+          <p>Price:<span id="storedPrice7"></span></p>
+        </div>
       </div>
 
     </div>
-    <button type="button" name="Back" class="back"><a href="project2.html">Continue Shopping</a></button>
-    <button type="button" name="ClearCart" class="clearCart">Clear Cart</button>
-    <button type="button" name="addToCart" class="addtoCart">Add to Cart</button>
 
+
+    <button type="button" name="ClearCart" class="clearCart">Clear Cart</button>
+    <button type="button" name="Back" class="back"><a href="project2.html">Continue Shopping</a></button>
+    <button type="button" name="addToCart" class="addtoCart"><a href="templates/index.html">Checkout</a></button>
+
+
+
+    <!-- JAVASCRIPT CODE -->
     <script type="text/javascript">
 
-      storedBN0.innerHTML = sessionStorage.getItem('BikeName0')
-      storedP0.innerHTML = sessionStorage.getItem('BikePrice0')
+      display = document.querySelectorAll('.itemContainer .allItems > div')
 
+      for(let index = 0; index < display.length; index++){
+        if(sessionStorage.getItem(`itemName${index}`) != null){
 
-      storedBN1.innerHTML = sessionStorage.getItem('BikeName1')
-      storedP1.innerHTML = sessionStorage.getItem('BikePrice1')
+           itemName = document.querySelector(`#storedItem${index}`)
+           itemPrice = document.querySelector(`#storedPrice${index}`)
 
+           display[index].style.display = 'block'
 
-      storedBN2.innerHTML = sessionStorage.getItem('BikeName2')
-      storedP2.innerHTML = sessionStorage.getItem('BikePrice2')
-
-
-      storedBN3.innerHTML = sessionStorage.getItem('BikeName3')
-      storedP3.innerHTML = sessionStorage.getItem('BikePrice3')
-
-
-      storedBN4.innerHTML = sessionStorage.getItem('BikeName4')
-      storedP4.innerHTML = sessionStorage.getItem('BikePrice4')
-
-      storedBN5.innerHTML = sessionStorage.getItem('BikeName5')
-      storedP5.innerHTML = sessionStorage.getItem('BikePrice5')
-
-      storedBN6.innerHTML = sessionStorage.getItem('BikeName6')
-      storedP6.innerHTML = sessionStorage.getItem('BikePrice6')
-
-
-      storedBN7.innerHTML = sessionStorage.getItem('BikeName7')
-      storedP7.innerHTML = sessionStorage.getItem('BikePrice7')
-
-
-      storedBN8.innerHTML = sessionStorage.getItem('BikeName8')
-      storedP8.innerHTML = sessionStorage.getItem('BikePrice8')
-
-      let items = document.querySelectorAll('.containerItems .item p span')
-      let itemContainer = document.querySelectorAll('.containerItems .item')
-      let itemSize = items.length
-
-
-      display()
-
-      function display(){
-        for(let i = 0; i < itemSize; i++){
-          if(items[i].innerHTML != ''){
-            console.log("TEST" , items[i])
-            console.log(i)
-            let num = Math.floor(i/2)
-            itemContainer[num].style.display = 'block'
-          }
+           itemName.innerHTML = sessionStorage.getItem(`itemName${index}`)
+           itemPrice.innerHTML = "$"
+           itemPrice.innerHTML += sessionStorage.getItem(`itemPrice${index}`)
         }
       }
+
+      const clearCart = document.querySelector('.clearCart')
+      const allInfo = document.querySelectorAll('.section > p')
+
+      function clearCartItems(){
+        for(let index = 0; index < allInfo.length ; index++){
+          allInfo[index].innerHTML = ''
+        }
+      }
+
+      clearCart.addEventListener('click', function(){
+        sessionStorage.clear()
+        clearCartItems()
+
+      })
+
 
     </script>
   </body>

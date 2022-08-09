@@ -85,6 +85,7 @@ let currentSection = 1
 let numberSections = sections.length
 itemContent(currentSection)
 
+
 menCategory.addEventListener('click', function(){
   currentSection = 1
   kidsCategory.style.textDecoration = 'none'
@@ -165,154 +166,53 @@ circle3.addEventListener('click', function(){
 /* ITEMS IN BAG TRACKER */
 let cartItemNum = 0;
 
-/* MODAL WINDOWS */
-const getitemNum = document.querySelectorAll('.bikeImg_contain')
-const openItem = document.querySelectorAll('.checkitemInfoText')
-const closeModal = document.querySelector('.closeModal')
+urlM = "img/img_bikes/men/"
+urlW = "img/img_bikes/women/"
+urlK = "img/img_bikes/kids/"
+b1 = "b1.png"
+b2 = "b2.png"
+b3 = "b3.png"
 
-const item0 = openItem[0]
-const item1 = openItem[1]
-const item2 = openItem[2]
-const item3 = openItem[3]
-const item4 = openItem[4]
-const item5 = openItem[5]
-const item6 = openItem[6]
-const item7 = openItem[7]
-const item8 = openItem[8]
+const bikeNames = ["GIANT CONTEND SL1","SPECIALIZED ALLEZ","CANNONDALE CAAD13 DISC 105","Fahrrad Manufaktur-TX-400"
+,"Santos Cross Lite", "Gudereit-SX-R-1.0", "Yoji 16", "Coop Bike", "Giant Bike"]
+const bikeImgs = [`${urlM}${b1}`, `${urlM}${b2}`, `${urlM}${b3}`,`${urlW}${b1}`, `${urlW}${b2}`, `${urlW}${b3}`, `${urlK}${b1}`, `${urlK}${b2}`, `${urlK}${b3}`]
+const bikePrices = ["1,199.00", "999.99", "2,300.00", "1,846.45", "2,448.00","2,199.00","495.00", "479.19", "356.00"]
 
-
-let addItem = document.querySelector('.addItem')
-let bikeName0, bikeName1, bikeName2, bikeName3, bikeName4, bikeName5, bikeName6, bikeName7, bikeName8;
-let price0, price1, price2, price3, price4, price5, price6, price7, price8;
-
-
-/* MODAL WINDOW MODIFICATIONS */
+/* MODAL WINDOW ELEMENTS */
 const modalWindow = document.querySelector('.modalWindow')
-openModalWindow()
+const closeModal = document.querySelector('.closeModal')
+const addItem = document.querySelector('.addItem')
 
-function openModalWindow(){
-  // MEN BIKES
-  item0.addEventListener('click', function(){
-    bikeName0 = document.getElementById("bikeName").innerHTML = "GIANT CONTEND SL1"
-    document.getElementById("bikeImg0").src = "img/img_bikes/men/b1.png";
-    price0 = document.getElementById("bikePrice").innerHTML = '$200'
+/* MODIFY MODAL ELEMENTS */
+const bName = document.querySelector('#bName')
+const bImg = document.querySelector('#bImg')
+const bPrice = document.querySelector('#bPrice')
+
+let index = -1
+
+/* SEE DETAILS BUTTON */
+const button = document.querySelectorAll('.shopCollections .item > div.checkitemInfo .checkitemInfoText')
+
+button.forEach(function(e){
+  e.addEventListener('click', function(){
+    index = e.id
     modalWindow.style.display = 'block'
+    bName.innerHTML = bikeNames[index]
+    bImg.src = bikeImgs[index]
+    bPrice.innerHTML = `$${bikePrices[index]}`
 
+
+    var itemName = `itemName${index}`
+    var itemPrice = `itemPrice${index}`
     addItem.addEventListener('click', function(){
 
-      sessionStorage.setItem("BikeName0", bikeName0);
-      sessionStorage.setItem("BikePrice0", price0);
+      if(sessionStorage.getItem(itemName) === null) {
+        sessionStorage.setItem(itemName, bikeNames[index]);
+        sessionStorage.setItem(itemPrice, bikePrices[index])
+      }
     })
-
   })
-  item1.addEventListener('click', function(){
-    bikeName1 = document.getElementById("bikeName").innerHTML = "SPECIALIZED ALLEZ"
-    document.getElementById("bikeImg0").src = "img/img_bikes/men/b2.png";
-    price1 = document.getElementById("bikePrice").innerHTML = '$300'
-    modalWindow.style.display = 'block'
-
-    addItem.addEventListener('click', function(){
-      sessionStorage.setItem("BikeName1", bikeName1);
-      sessionStorage.setItem("BikePrice1", price1);
-
-    })
-
-  })
-  item2.addEventListener('click', function(){
-    bikeName2 = document.getElementById("bikeName").innerHTML = "CANNONDALE CAAD13 DISC 105"
-    document.getElementById("bikeImg0").src = "img/img_bikes/men/b3.png";
-    price2 = document.getElementById("bikePrice").innerHTML = '$300'
-    modalWindow.style.display = 'block'
-
-    addItem.addEventListener('click', function(){
-      sessionStorage.setItem("BikeName2", bikeName2);
-      sessionStorage.setItem("BikePrice2", price2);
-    })
-
-  })
-
-  // WOMEN BIKES
-  item3.addEventListener('click', function(){
-    bikeName3 = document.getElementById("bikeName").innerHTML = "VSF-Fahrrad Manufaktur-TX-400"
-    document.getElementById("bikeImg0").src = "img/img_bikes/women/b1.png";
-    price3 = document.getElementById("bikePrice").innerHTML = '$300'
-    modalWindow.style.display = 'block'
-
-    addItem.addEventListener('click', function(){
-      sessionStorage.setItem("BikeName3", bikeName3);
-      sessionStorage.setItem("BikePrice3", price3);
-    })
-
-  })
-  item4.addEventListener('click', function(){
-    bikeName4 = document.getElementById("bikeName").innerHTML = "Santos Cross Lite"
-    document.getElementById("bikeImg0").src = "img/img_bikes/women/b2.png";
-    price4 = document.getElementById("bikePrice").innerHTML = '$300'
-    modalWindow.style.display = 'block'
-
-    addItem.addEventListener('click', function(){
-      sessionStorage.setItem("BikeName4", bikeName4);
-      sessionStorage.setItem("BikePrice4", price4);
-    })
-
-  })
-  item5.addEventListener('click', function(){
-    bikeName5 = document.getElementById("bikeName").innerHTML = "Gudereit-SX-R-1.0"
-    document.getElementById("bikeImg0").src = "img/img_bikes/women/b3.png";
-    price5 = document.getElementById("bikePrice").innerHTML = '$300'
-    modalWindow.style.display = 'block'
-
-    addItem.addEventListener('click', function(){
-      sessionStorage.setItem("BikeName5", bikeName5);
-      sessionStorage.setItem("BikePrice5", price5);
-    })
-
-  })
-
-
-  // KIDS
-  item6.addEventListener('click', function(){
-    bikeName6 = document.getElementById("bikeName").innerHTML = "Yoji 16"
-    document.getElementById("bikeImg0").src = "img/img_bikes/kids/b1.png";
-    price6 = document.getElementById("bikePrice").innerHTML = '$100'
-    modalWindow.style.display = 'block'
-
-    addItem.addEventListener('click', function(){
-      sessionStorage.setItem("BikeName6", bikeName6);
-      sessionStorage.setItem("BikePrice6", price6);
-    })
-
-  })
-
-
-  item7.addEventListener('click', function(){
-    bikeName7 = document.getElementById("bikeName").innerHTML = "Coop Bike"
-    document.getElementById("bikeImg0").src = "img/img_bikes/kids/b2.png";
-    price7 = document.getElementById("bikePrice").innerHTML = '$300'
-    modalWindow.style.display = 'block'
-
-    addItem.addEventListener('click', function(){
-      sessionStorage.setItem("BikeName7", bikeName7);
-      sessionStorage.setItem("BikePrice7", price7);
-
-    })
-
-  })
-
-
-  item8.addEventListener('click', function(){
-    bikeName8 = document.getElementById("bikeName").innerHTML = "Giant Bike"
-    document.getElementById("bikeImg0").src = "img/img_bikes/kids/b3.png";
-    price8 = document.getElementById("bikePrice").innerHTML = '$900'
-    modalWindow.style.display = 'block'
-
-    addItem.addEventListener('click', function(){
-      sessionStorage.setItem("BikeName8", bikeName8);
-      sessionStorage.setItem("BikePrice8", price8);
-    })
-
-  })
-}
+})
 
 closeModal.addEventListener('click', function(){
   modalWindow.style.display = 'none'

@@ -1209,6 +1209,7 @@ hr{
   bottom: 0%;
   display: none;
   z-index: 10;
+  width: 100%;
 }
 
 
@@ -1285,7 +1286,6 @@ hr{
 
 
 .modalFooter{
-  height: 99px;
   margin-top: 150px;
   padding: 1em;
   text-align: center;
