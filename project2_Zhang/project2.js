@@ -222,10 +222,6 @@ button.forEach(function(e){
       if(sessionStorage.getItem(itemName) === null) {
         addItemToCart[index] =  "Added"
         bAdd.innerHTML =  addItemToCart[index]
-        modifyAdd[index] = modifiedColor
-
-        bAdd.style.border = modifyAdd[index][0]
-        bAdd.style.color = modifyAdd[index][1]
 
         cartItemNum += 1
         itemTracker.innerHTML = cartItemNum
