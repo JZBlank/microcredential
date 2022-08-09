@@ -287,7 +287,7 @@
           Billing Information
         </div>
 
-        <form class="" action="index.html" method="post">
+        <form class="text" action="index.html" onsubmit="return validateForm()" method="post" form name = "BillingInfo">
           <div class="text">First Name</div>
           <input type="firstName" name="first_name" required value="" title="Your Info will
           be safe with us" style="width:200px; width: 100%">
@@ -306,7 +306,7 @@
           <div class="buttonLocation">
             <button type="button" name="ClearCart" class="clearCart">Clear Cart</button>
             <button type="button" name="Back" class="back"><a href="../project2.html">Continue Shopping</a></button>
-            <button type="submit" name="button"><a href="orderConfirmed.html">CheckOut</a></button>
+            <button type="submit" onclick="validateForm()" name="button"><a href="orderConfirmed.html" id="checkForm">CheckOut</a></button>
           </div>
         </div>
 
@@ -360,5 +360,6 @@
       </div>
     </div>
   </footer>
+  <script src="jquery-3.6.0.min.js"></script>
   <script type="text/javascript" src="checkOut.js"></script>
 </html>

@@ -37,7 +37,7 @@ subTotal.innerHTML = `Subtotal : $${subTotal_}`
 shippingTotal.innerHTML = `Shipping : $${shippingTotal_}`
 priceTotal.innerHTML = `Total Price : $${priceTotal_}`
 
-
+priceTotal_ = priceTotal_.toFixed(2)
 
 
 for(let index = 0; index < display.length; index++){
@@ -96,3 +96,17 @@ clearCart.addEventListener('click', function(){
 
 // REMOVE ITEM FROM CART
 removeItem = document.querySelectorAll('.deleteItem')
+
+
+function validateForm() {
+  let firstName = document.forms["BillingInfo"]["first_name"].value;
+  let lastName = document.forms["BillingInfo"]["last_name"].value;
+  let emailInfo = document.forms["BillingInfo"]["email_address"].value;
+  if(firstName == "" || lastName == "" || emailInfo == "") {
+    alert("All information must be filled out");
+    event.preventDefault()
+  }
+  else{
+    return true;
+  }
+}
