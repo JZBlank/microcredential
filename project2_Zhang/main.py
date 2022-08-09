@@ -26,13 +26,18 @@ class Data(db.Model):
 
 # Homepage when application is ran
 @app.route("/")
-def hello():
-    return render_template("index.html")
+def home():
+    return render_template("project2.html")
+
+@app.route("/checkOut")
+def shoppingCart():
+    return render_template("checkOut.html")
+
 
 # Handle the homepage when the form is submitted
 # request .method == "POST" is collecting the data of the form when submit button is clicked
-@app.route("/", methods=["POST"])
-def thankyou():
+@app.route("/checkOut", methods=["POST"])
+def checkOut():
     if request.method == "POST":
         firstname = request.form["first_name"]
         lastname = request.form["last_name"]
@@ -43,11 +48,7 @@ def thankyou():
     customers = Data(firstname, lastname, email, total)
     db.session.add(customers)
     db.session.commit() # Execute the data into database
-    return render_template("thankyou.html")
-
-@app.route("/about")
-def aboutUs():
-    return "<h1>About Us</h1>"
+    return render_template("orderConfirmed.html")
 
 if __name__ =="__main__":
     app.debug=True
