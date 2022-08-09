@@ -178,7 +178,7 @@ modifiedColor = ['2px solid #F2CEAF', 'black']
 const bikeNames = ["GIANT CONTEND SL1","SPECIALIZED ALLEZ","CANNONDALE CAAD13 DISC 105","Fahrrad Manufaktur-TX-400"
 ,"Santos Cross Lite", "Gudereit-SX-R-1.0", "Yoji 16", "Coop Bike", "Giant Bike"]
 const bikeImgs = [`${urlM}${b1}`, `${urlM}${b2}`, `${urlM}${b3}`,`${urlW}${b1}`, `${urlW}${b2}`, `${urlW}${b3}`, `${urlK}${b1}`, `${urlK}${b2}`, `${urlK}${b3}`]
-const bikePrices = ["1,199.00", "999.99", "2,300.00", "1,846.45", "2,448.00","2,199.00","495.00", "479.19", "356.00"]
+const bikePrices = ["1199.00", "999.99", "2300.00", "1846.45", "2448.00","2199.00","495.00", "479.19", "356.00"]
 let addItemToCart = ["Add to Cart","Add to Cart","Add to Cart","Add to Cart","Add to Cart","Add to Cart","Add to Cart","Add to Cart","Add to Cart"]
 let modifyAdd = [originalColor, originalColor, originalColor, originalColor, originalColor, originalColor, originalColor, originalColor, originalColor]
 
