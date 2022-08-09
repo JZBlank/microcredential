@@ -172,11 +172,16 @@ urlK = "img/img_bikes/kids/"
 b1 = "b1.png"
 b2 = "b2.png"
 b3 = "b3.png"
+originalColor = ['black', '2px solid #F2CEAF']
+modifiedColor = ['2px solid #F2CEAF', 'black']
 
 const bikeNames = ["GIANT CONTEND SL1","SPECIALIZED ALLEZ","CANNONDALE CAAD13 DISC 105","Fahrrad Manufaktur-TX-400"
 ,"Santos Cross Lite", "Gudereit-SX-R-1.0", "Yoji 16", "Coop Bike", "Giant Bike"]
 const bikeImgs = [`${urlM}${b1}`, `${urlM}${b2}`, `${urlM}${b3}`,`${urlW}${b1}`, `${urlW}${b2}`, `${urlW}${b3}`, `${urlK}${b1}`, `${urlK}${b2}`, `${urlK}${b3}`]
 const bikePrices = ["1,199.00", "999.99", "2,300.00", "1,846.45", "2,448.00","2,199.00","495.00", "479.19", "356.00"]
+let addItemToCart = ["Add to Cart","Add to Cart","Add to Cart","Add to Cart","Add to Cart","Add to Cart","Add to Cart","Add to Cart","Add to Cart"]
+let modifyAdd = [originalColor, originalColor, originalColor, originalColor, originalColor, originalColor, originalColor, originalColor, originalColor]
+
 
 /* MODAL WINDOW ELEMENTS */
 const modalWindow = document.querySelector('.modalWindow')
@@ -187,26 +192,43 @@ const addItem = document.querySelector('.addItem')
 const bName = document.querySelector('#bName')
 const bImg = document.querySelector('#bImg')
 const bPrice = document.querySelector('#bPrice')
+const bAdd = document.querySelector("#bAdd")
 
 let index = -1
 
 /* SEE DETAILS BUTTON */
 const button = document.querySelectorAll('.shopCollections .item > div.checkitemInfo .checkitemInfoText')
+const itemTracker =  document.querySelector('#itemTracker')
 
 button.forEach(function(e){
   e.addEventListener('click', function(){
+    tracker = 0
     index = e.id
     modalWindow.style.display = 'block'
     bName.innerHTML = bikeNames[index]
     bImg.src = bikeImgs[index]
     bPrice.innerHTML = `$${bikePrices[index]}`
+    bAdd.innerHTML = addItemToCart[index]
 
+    bAdd.style.color = modifyAdd[index][0]
+    bAdd.style.border = modifyAdd[index][1]
 
     var itemName = `itemName${index}`
     var itemPrice = `itemPrice${index}`
-    addItem.addEventListener('click', function(){
 
+
+
+    addItem.addEventListener('click', function(){
       if(sessionStorage.getItem(itemName) === null) {
+        addItemToCart[index] =  "Added"
+        bAdd.innerHTML =  addItemToCart[index]
+        modifyAdd[index] = modifiedColor
+
+        bAdd.style.border = modifyAdd[index][0]
+        bAdd.style.color = modifyAdd[index][1]
+
+        cartItemNum += 1
+        itemTracker.innerHTML = cartItemNum
         sessionStorage.setItem(itemName, bikeNames[index]);
         sessionStorage.setItem(itemPrice, bikePrices[index])
       }
