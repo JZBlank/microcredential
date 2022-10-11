@@ -10,3 +10,6 @@ where they will be notified of the total cost of their purchase is.
 HTML, CSS, JavaScript, Flask, PostgreSQL, etc
 
 *All images used do not belong to me*
+
+Link to website:
+https://jzblank.github.io/microcredential/project2_Zhang/project2.html
